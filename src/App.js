@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Card from "./Cards";
+import { race_human, race_elf, race_dwarf, race_orc } from "./Const.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Card name="Human" attributes={{ race_human }} />
+      <Card name="Elf" attributes={race_elf} />
+      <Card name="Dwarf" attributes={race_dwarf} />
+      <Card name="Orc " attributes={race_orc} />
     </div>
   );
 }
