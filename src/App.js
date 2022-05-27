@@ -1,12 +1,26 @@
 import "./App.css";
-import React from "react";
-import CardsState from "./components/CardsState";
+import React, { useState } from "react";
+import RaceCardsState from "./components/RaceCardsState";
+import ClassCardsState from "./components/ClassCardsState";
 
 function App() {
+  const [pickedRaceCard, setpickedRaceCard] = useState("Nie wybrano");
+  const [pickedClassCard, setpickedClassCard] = useState("Nie wybrano");
+  // const [toggleCard, setToggleCard] = useState(0);
+
+  // const setpickedRaceCard1 =()=>{
+  //   setpickedRaceCard
+  // }
+
   return (
     <div className="app">
-      <CardsState />
-      <p>Kliknięto {pickedCard}</p>
+      <RaceCardsState setpickedCard={setpickedRaceCard} />
+      {pickedRaceCard != "Nie wybrano" && (
+        <ClassCardsState setpickedCard={setpickedClassCard} />
+      )}
+
+      <p>Kliknięto Rase {pickedRaceCard}</p>
+      <p>Kliknięto Klase {pickedClassCard}</p>
     </div>
   );
 }
