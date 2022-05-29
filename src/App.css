@@ -19,9 +19,23 @@
   align-items: center;
 }
 
-.PageButton {
-  flex-direction: column;
+.ButtonsMainPage {
+  position: absolute;
+  top: 15%;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Test {
+  position: absolute;
+  top: 75%;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  display: flex;
+}
+p {
+  margin: 20px;
+  font-size: 20px;
 }

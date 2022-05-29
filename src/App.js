@@ -9,30 +9,47 @@ function App() {
   const [pickedClassCard, setpickedClassCard] = useState("Nie wybrano");
   const [currentTab, setCurrentTab] = useState(0);
 
-  function CheckButtonStatus() {}
+  // function CheckButtonStatus() {}
 
   return (
-    <div className="Test">
-      <button className="PageButton" onClick={() => setCurrentTab(0)}>
-        Rasy postaci
-      </button>
-      <button className="PageButton" onClick={() => setCurrentTab(1)}>
-        Klasy postaci
-      </button>
-      <button className="PageButton" onClick={() => setCurrentTab(2)}>
-        Atrybuty postaci
-      </button>
-      <div className="app">
-        {currentTab === 0 && (
-          <RaceCardsState setpickedCard={setpickedRaceCard} />
-        )}
-        {currentTab === 1 && (
-          <ClassCardsState setpickedCard={setpickedClassCard} />
-        )}
-        {currentTab === 2 && <AttributesPage />}
+    <div className="app">
+      <div className="ButtonsMainPage">
+        <button
+          level={1}
+          className="PageButton"
+          onClick={() => setCurrentTab(1)}
+          disabled={currentTab !== 0}
+        >
+          Rasy postaci
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <button
+          level={2}
+          className="PageButton"
+          onClick={() => setCurrentTab(2)}
+          disabled={currentTab !== 1}
+        >
+          Klasy postaci
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <button
+          level={3}
+          className="PageButton"
+          onClick={() => setCurrentTab(3)}
+          disabled={currentTab !== 2}
+        >
+          Atrybuty postaci
+        </button>
+      </div>
 
-        <p style={{ color: "white" }}>Kliknięto Rase {pickedRaceCard}</p>
-        <p style={{ color: "white" }}>Kliknięto Klase {pickedClassCard}</p>
+      {currentTab === 0 && <RaceCardsState setpickedCard={setpickedRaceCard} />}
+      {currentTab === 1 && (
+        <ClassCardsState setpickedCard={setpickedClassCard} />
+      )}
+      {currentTab === 2 && <AttributesPage />}
+      <div className="Test">
+        <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
+        <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
       </div>
     </div>
   );
