@@ -2,25 +2,38 @@ import "./App.css";
 import React, { useState } from "react";
 import RaceCardsState from "./components/RaceCardsState";
 import ClassCardsState from "./components/ClassCardsState";
+import AttributesPage from "./components/AttributesPage";
 
 function App() {
   const [pickedRaceCard, setpickedRaceCard] = useState("Nie wybrano");
   const [pickedClassCard, setpickedClassCard] = useState("Nie wybrano");
-  // const [toggleCard, setToggleCard] = useState(0);
+  const [currentTab, setCurrentTab] = useState(0);
 
-  // const setpickedRaceCard1 =()=>{
-  //   setpickedRaceCard
-  // }
+  function CheckButtonStatus() {}
 
   return (
-    <div className="app">
-      <RaceCardsState setpickedCard={setpickedRaceCard} />
-      {pickedRaceCard != "Nie wybrano" && (
-        <ClassCardsState setpickedCard={setpickedClassCard} />
-      )}
+    <div className="Test">
+      <button className="PageButton" onClick={() => setCurrentTab(0)}>
+        Rasy postaci
+      </button>
+      <button className="PageButton" onClick={() => setCurrentTab(1)}>
+        Klasy postaci
+      </button>
+      <button className="PageButton" onClick={() => setCurrentTab(2)}>
+        Atrybuty postaci
+      </button>
+      <div className="app">
+        {currentTab === 0 && (
+          <RaceCardsState setpickedCard={setpickedRaceCard} />
+        )}
+        {currentTab === 1 && (
+          <ClassCardsState setpickedCard={setpickedClassCard} />
+        )}
+        {currentTab === 2 && <AttributesPage />}
 
-      <p>Kliknięto Rase {pickedRaceCard}</p>
-      <p>Kliknięto Klase {pickedClassCard}</p>
+        <p style={{ color: "white" }}>Kliknięto Rase {pickedRaceCard}</p>
+        <p style={{ color: "white" }}>Kliknięto Klase {pickedClassCard}</p>
+      </div>
     </div>
   );
 }
