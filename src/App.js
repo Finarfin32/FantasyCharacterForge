@@ -8,40 +8,54 @@ function App() {
   const [pickedRaceCard, setpickedRaceCard] = useState("Nie wybrano");
   const [pickedClassCard, setpickedClassCard] = useState("Nie wybrano");
   const [currentTab, setCurrentTab] = useState(0);
+  const [isDisabled, setDisabled] = useState([false, true, true]);
 
-  // function CheckButtonStatus() {}
+  const handleSubmit = () => {
+    if (pickedRaceCard === true) {
+      setDisabled([false, false, true]);
+    } else if (pickedClassCard === true) {
+      setDisabled([false, false, false]);
+    } else {
+      setDisabled([true, true, false]);
+    }
+  };
 
   return (
     <div className="app">
       <div className="ButtonsMainPage">
         <button
-          level={1}
           className="PageButton"
-          onClick={() => setCurrentTab(1)}
-          disabled={currentTab !== 0}
+          onClick={() => {
+            setCurrentTab(0);
+            handleSubmit();
+          }}
+          disabled={isDisabled[0]}
         >
           Rasy postaci
         </button>
         &nbsp;&nbsp;&nbsp;
         <button
-          level={2}
           className="PageButton"
-          onClick={() => setCurrentTab(2)}
-          disabled={currentTab !== 1}
+          onClick={() => {
+            setCurrentTab(1);
+            handleSubmit();
+          }}
+          disabled={isDisabled[1]}
         >
           Klasy postaci
         </button>
         &nbsp;&nbsp;&nbsp;
         <button
-          level={3}
           className="PageButton"
-          onClick={() => setCurrentTab(3)}
-          disabled={currentTab !== 2}
+          onClick={() => {
+            setCurrentTab(2);
+            handleSubmit();
+          }}
+          disabled={isDisabled[2]}
         >
           Atrybuty postaci
         </button>
       </div>
-
       {currentTab === 0 && <RaceCardsState setpickedCard={setpickedRaceCard} />}
       {currentTab === 1 && (
         <ClassCardsState setpickedCard={setpickedClassCard} />
