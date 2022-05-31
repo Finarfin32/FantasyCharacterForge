@@ -39,3 +39,23 @@ p {
   margin: 20px;
   font-size: 20px;
 }
+
+.Test1 {
+  /* height: 1000px;
+  width: 1000px; */
+  border: #282c34 solid 2px;
+}
+
+.Test2 {
+  height: 300px;
+  width: 300px;
+  border: red solid 2px;
+  float: left;
+}
+
+.Test3 {
+  height: 300px;
+  width: 300px;
+  border: blue solid 2px;
+  float: left;
+}
