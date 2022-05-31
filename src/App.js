@@ -11,15 +11,16 @@ function App() {
   const [isDisabled, setDisabled] = useState([false, true, true]);
 
   const handleSubmit = () => {
-    if (pickedRaceCard === true) {
+    // sparwdzanie po aktualnej zakładce oraz dodatkowo warunek odnośnie "nie wybrano" -
+    // aby cofanie się do poprzedniej zakładki ponownie nie ustawiało atrybutów na disabled
+    if (currentTab === 0 && pickedRaceCard === "Nie wybrano") {
       setDisabled([false, false, true]);
-    } else if (pickedClassCard === true) {
+    } else if (currentTab === 1 && pickedClassCard === "Nie wybrano") {
       setDisabled([false, false, false]);
     } else {
-      setDisabled([true, true, false]);
+      setDisabled([false, false, false]);
     }
   };
-
   return (
     <div className="app">
       <div className="ButtonsMainPage">
@@ -27,7 +28,6 @@ function App() {
           className="PageButton"
           onClick={() => {
             setCurrentTab(0);
-            handleSubmit();
           }}
           disabled={isDisabled[0]}
         >
@@ -38,7 +38,6 @@ function App() {
           className="PageButton"
           onClick={() => {
             setCurrentTab(1);
-            handleSubmit();
           }}
           disabled={isDisabled[1]}
         >
@@ -49,16 +48,15 @@ function App() {
           className="PageButton"
           onClick={() => {
             setCurrentTab(2);
-            handleSubmit();
           }}
           disabled={isDisabled[2]}
         >
           Atrybuty postaci
         </button>
       </div>
-      {currentTab === 0 && <RaceCardsState setpickedCard={setpickedRaceCard} />}
+      {currentTab === 0 && <RaceCardsState setpickedCard={setpickedRaceCard} handleSubmit={handleSubmit}/>}
       {currentTab === 1 && (
-        <ClassCardsState setpickedCard={setpickedClassCard} />
+        <ClassCardsState setpickedCard={setpickedClassCard} handleSubmit={handleSubmit}/>
       )}
       {currentTab === 2 && <AttributesPage />}
       <div className="Test">
