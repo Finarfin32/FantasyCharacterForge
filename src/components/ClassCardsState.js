@@ -6,13 +6,13 @@ import {
   PLAYABLE_CLASS_HUNTER,
   PLAYABLE_CLASS_MAGE,
   PLAYABLE_CLASS_PRIEST,
-} from "../Const.js";
+} from "../const.js";
 
 function ClassCardsState({ setpickedCard, handleSubmit }) {
-    const setCardAndButtons = (classOfCard) => {
-        setpickedCard(classOfCard);
-        handleSubmit();
-    }
+  const setCardAndButtons = (classOfCard) => {
+    setpickedCard(classOfCard);
+    handleSubmit();
+  };
   return (
     <>
       <div className="Warrior" onClick={() => setCardAndButtons("WARRIOR")}>
