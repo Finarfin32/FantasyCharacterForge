@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #282c34;
+  background: url(media/body-bg.png) repeat;
 }
 
 .cards {
