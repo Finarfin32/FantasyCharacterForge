@@ -8,10 +8,11 @@ import {
   PLAYABLE_CLASS_PRIEST,
 } from "../const.js";
 
-function ClassCardsState({ setpickedCard, handleSubmit }) {
+function ClassCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
   const setCardAndButtons = (classOfCard) => {
     setpickedCard(classOfCard);
     handleSubmit();
+    setCurrentTab(2);
   };
   return (
     <>

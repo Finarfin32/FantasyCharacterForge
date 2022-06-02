@@ -1,4 +1,5 @@
 import "./App.css";
+import "./shared.scss";
 import React, { useState } from "react";
 import RaceCardsState from "./components/RaceCardsState";
 import ClassCardsState from "./components/ClassCardsState";
@@ -23,7 +24,7 @@ function App() {
     <div className="app">
       <div className="ButtonsMainPage">
         <button
-          className="btn"
+          className="btn draw-border"
           onClick={() => {
             setCurrentTab(0);
           }}
@@ -33,7 +34,7 @@ function App() {
         </button>
         &nbsp;&nbsp;&nbsp;
         <button
-          className="btn"
+          className="btn draw-border"
           onClick={() => {
             setCurrentTab(1);
           }}
@@ -43,7 +44,7 @@ function App() {
         </button>
         &nbsp;&nbsp;&nbsp;
         <button
-          className="btn"
+          className="btn draw-border"
           onClick={() => {
             setCurrentTab(2);
           }}
@@ -56,12 +57,14 @@ function App() {
         <RaceCardsState
           setpickedCard={setpickedRaceCard}
           handleSubmit={handleSubmit}
+          setCurrentTab={setCurrentTab}
         />
       )}
       {currentTab === 1 && (
         <ClassCardsState
           setpickedCard={setpickedClassCard}
           handleSubmit={handleSubmit}
+          setCurrentTab={setCurrentTab}
         />
       )}
       {currentTab === 2 && <AttributesPage />}
