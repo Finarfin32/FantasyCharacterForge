@@ -4,17 +4,19 @@ import React, { useState } from "react";
 import RaceCardsState from "./components/RaceCardsState";
 import ClassCardsState from "./components/ClassCardsState";
 import AttributesPage from "./components/AttributesPage";
+import Description from "./components/DescriptionCards";
+import Buttons from "./components/Buttons";
 
 function App() {
-  const [pickedRaceCard, setpickedRaceCard] = useState("Nie wybrano");
-  const [pickedClassCard, setpickedClassCard] = useState("Nie wybrano");
+  const [pickedRaceCard, setpickedRaceCard] = useState("Not selected");
+  const [pickedClassCard, setpickedClassCard] = useState("Not selected");
   const [currentTab, setCurrentTab] = useState(0);
   const [isDisabled, setDisabled] = useState([false, true, true]);
 
   const handleSubmit = () => {
-    if (currentTab === 0 && pickedRaceCard === "Nie wybrano") {
+    if (currentTab === 0 && pickedRaceCard === "Not selected") {
       setDisabled([false, false, true]);
-    } else if (currentTab === 1 && pickedClassCard === "Nie wybrano") {
+    } else if (currentTab === 1 && pickedClassCard === "Not selected") {
       setDisabled([false, false, false]);
     } else {
       setDisabled([false, false, false]);
@@ -22,37 +24,8 @@ function App() {
   };
   return (
     <div className="app">
-      <div className="ButtonsMainPage">
-        <button
-          className="btn draw-border"
-          onClick={() => {
-            setCurrentTab(0);
-          }}
-          disabled={isDisabled[0]}
-        >
-          Rasy postaci
-        </button>
-        &nbsp;&nbsp;&nbsp;
-        <button
-          className="btn draw-border"
-          onClick={() => {
-            setCurrentTab(1);
-          }}
-          disabled={isDisabled[1]}
-        >
-          Klasy postaci
-        </button>
-        &nbsp;&nbsp;&nbsp;
-        <button
-          className="btn draw-border"
-          onClick={() => {
-            setCurrentTab(2);
-          }}
-          disabled={isDisabled[2]}
-        >
-          Atrybuty postaci
-        </button>
-      </div>
+      <Buttons setCurrentTab={setCurrentTab} isDisabled={isDisabled}></Buttons>
+
       {currentTab === 0 && (
         <RaceCardsState
           setpickedCard={setpickedRaceCard}
@@ -72,6 +45,13 @@ function App() {
         <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
         <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
       </div>
+      {currentTab !== 2 && (
+        <Description
+          pickedRaceCard={pickedRaceCard}
+          pickedClassCard={pickedClassCard}
+          currentTab={currentTab}
+        ></Description>
+      )}
     </div>
   );
 }

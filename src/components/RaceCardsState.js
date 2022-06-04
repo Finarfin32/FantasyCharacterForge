@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "./RaceCards.js";
 import "../App.css";
-import { RACE_HUMAN, RACE_ELF, RACE_DWARF, RACE_ORC } from "../const.js";
 
 function RaceCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
   const setCardAndButtons = (raceOfCard) => {
@@ -11,17 +10,17 @@ function RaceCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
   };
   return (
     <>
-      <div className="Human" onClick={() => setCardAndButtons("HUMAN")}>
-        <Card name="Human" attributes={RACE_HUMAN} />
+      <div className="Human" onClick={() => setCardAndButtons(0)}>
+        <Card name="Human" />
       </div>
-      <div className="Elf" onClick={() => setCardAndButtons("ELF")}>
-        <Card name="Elf" attributes={RACE_ELF} />
+      <div className="Elf" onClick={() => setCardAndButtons(1)}>
+        <Card name="Elf" />
       </div>
-      <div className="Dwarf" onClick={() => setCardAndButtons("DWARF")}>
-        <Card name="Dwarf" attributes={RACE_DWARF} />
+      <div className="Dwarf" onClick={() => setCardAndButtons(2)}>
+        <Card name="Dwarf" />
       </div>
-      <div className="Orc" onClick={() => setCardAndButtons("ORC")}>
-        <Card name="Orc" attributes={RACE_ORC} />
+      <div className="Orc" onClick={() => setCardAndButtons(3)}>
+        <Card name="Orc" />
       </div>
     </>
   );
