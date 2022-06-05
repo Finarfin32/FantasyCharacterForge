@@ -67,7 +67,7 @@
 }
 
 //=== Button styling, semi-ignore
-.btn {
+.btn-tab {
   background: none;
   border: none;
   cursor: pointer;
@@ -81,8 +81,8 @@
   }
 }
 
-.btn:disabled,
-.btn[disabled] {
+.btn-tab:disabled,
+.btn-tab[disabled] {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;

@@ -5,7 +5,7 @@ function Buttons({ setCurrentTab, isDisabled }) {
   return (
     <div className="ButtonsMainPage">
       <button
-        className="btn draw-border"
+        className="btn-tab draw-border"
         onClick={() => {
           setCurrentTab(0);
         }}
@@ -15,7 +15,7 @@ function Buttons({ setCurrentTab, isDisabled }) {
       </button>
       &nbsp;&nbsp;&nbsp;
       <button
-        className="btn draw-border"
+        className="btn-tab draw-border"
         onClick={() => {
           setCurrentTab(1);
         }}
@@ -25,7 +25,7 @@ function Buttons({ setCurrentTab, isDisabled }) {
       </button>
       &nbsp;&nbsp;&nbsp;
       <button
-        className="btn draw-border"
+        className="btn-tab draw-border"
         onClick={() => {
           setCurrentTab(2);
         }}

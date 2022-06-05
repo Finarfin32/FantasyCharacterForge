@@ -1,5 +1,6 @@
 import "./App.css";
 import "./shared.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import RaceCardsState from "./components/RaceCardsState";
 import ClassCardsState from "./components/ClassCardsState";
