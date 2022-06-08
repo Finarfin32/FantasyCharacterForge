@@ -11,18 +11,23 @@ function Description({ currentTab, pickedRaceCard, pickedClassCard }) {
       setActiveCard(pickedClassCard);
     else setActiveCard(0);
   }, [currentTab, pickedRaceCard, pickedClassCard]);
+
   return (
     <>
       <button
-        className="Arrow"
-        onClick={() => setActiveCard(activeCard - 1)}
+        className="Arrow arrow arrow-left"
+        onClick={() => {
+          setActiveCard(activeCard - 1);
+        }}
         disabled={activeCard === 0 ? true : false}
       >
-        - Arrow left{" "}
+        - Arrow left
       </button>
       <button
-        className="Arrow"
-        onClick={() => setActiveCard(activeCard + 1)}
+        className="Arrow arrow arrow-right"
+        onClick={() => {
+          setActiveCard(activeCard + 1);
+        }}
         disabled={activeCard === 3 ? true : false}
       >
         Arrow right -
