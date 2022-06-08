@@ -5,7 +5,7 @@ import "../App.css";
 function RaceCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
   const setCardAndButtons = (raceOfCard) => {
     setpickedCard(raceOfCard);
-    handleSubmit();
+    handleSubmit(); //same as classcards
     setCurrentTab(1);
   };
   return (

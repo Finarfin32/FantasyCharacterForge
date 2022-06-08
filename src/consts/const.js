@@ -1,7 +1,7 @@
 import { Race } from "../models";
 import { Playable_class } from "../models";
 
-export const RACE_HUMAN = new Race(5, 8, 10);
+export const RACE_HUMAN = new Race(5, 8, 10); //object with Constant values
 
 export const RACE_ELF = new Race(3, 10, 12);
 
@@ -17,5 +17,5 @@ export const PLAYABLE_CLASS_MAGE = new Playable_class(1, 2, 6);
 
 export const PLAYABLE_CLASS_PRIEST = new Playable_class(4, 4, 10);
 
-export const RACES_NAMES = ["HUMAN", "ELF", "DWARF", "ORC"];
+export const RACES_NAMES = ["HUMAN", "ELF", "DWARF", "ORC"]; //Array - 4 elements, string
 export const CLASSES_NAMES = ["WARRIOR", "HUNTER", "MAGE", "PRIEST"];

@@ -1,4 +1,5 @@
 export const RACE_DESCRIPTION = [
+  //Array with descriptions, string
   "description HUMAN",
   "description ELF",
   "description DWARF",

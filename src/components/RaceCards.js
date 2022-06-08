@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-
+//Show Card name
 function Card({ name }) {
   return (
     <div className="cards">

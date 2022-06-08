@@ -13,6 +13,8 @@ function App() {
   const [currentTab, setCurrentTab] = useState(0);
   const [isDisabled, setDisabled] = useState([false, true, true]);
 
+  //Function locks the buttons if (currentTab && pickedRaceCard) - true
+  //Function change array setDisabled
   const handleSubmit = () => {
     if (currentTab === 0 && pickedRaceCard === "Not selected") {
       setDisabled([false, false, true]);
@@ -24,8 +26,9 @@ function App() {
   };
   return (
     <div className="app">
-      <Buttons setCurrentTab={setCurrentTab} isDisabled={isDisabled}></Buttons>
-
+      <Buttons setCurrentTab={setCurrentTab} isDisabled={isDisabled}></Buttons>{" "}
+      {/* Component / shows Buttons / set their state */}
+      {/*if current tab 0 show RaceCardState with 3 properties */}
       {currentTab === 0 && (
         <RaceCardsState
           setpickedCard={setpickedRaceCard}
@@ -33,6 +36,7 @@ function App() {
           setCurrentTab={setCurrentTab}
         />
       )}
+      {/*if current tab 1 show ClassCardState with 3 properties */}
       {currentTab === 1 && (
         <ClassCardsState
           setpickedCard={setpickedClassCard}
@@ -40,6 +44,7 @@ function App() {
           setCurrentTab={setCurrentTab}
         />
       )}
+      {/*if current tab 2 show AttributesPage with div Test and Description */}
       {currentTab === 2 && <AttributesPage />}
       <div className="Test">
         <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
