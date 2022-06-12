@@ -1,19 +1,40 @@
 import React from "react";
 import "../App.css";
-// import background_attributes from "../media/background_attributes.jpg";
+import { useForm } from "react-hook-form";
 
 function AttributesPage() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+
+  console.log(watch("example"));
+
   return (
     <div className="container_attributes">
       <div className="left_attributes_grid">
         <div className="attributes_col">
           <h1>LEWO</h1>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input defaultValue="test" {...register("example")} />
+            <input type="submit" />
+          </form>
         </div>
         <div className="attributes_col">
           <h1>LEWO</h1>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input {...register("exampleRequired", { required: true })} />
+            {errors.exampleRequired && <span>This field is required</span>}
+          </form>
         </div>
         <div className="attributes_col">
           <h1>LEWO</h1>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input defaultValue="test" {...register("example2")} />
+          </form>
         </div>
         <div className="attributes_col">
           <h1>LEWO</h1>
