@@ -46,10 +46,6 @@ function App() {
       )}
       {/*if current tab 2 show AttributesPage with div Test and Description */}
       {currentTab === 2 && <AttributesPage />}
-      <div className="Test">
-        <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
-        <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
-      </div>
       <div className="Buttons2">
         {currentTab !== 2 && (
           <Description
@@ -58,6 +54,10 @@ function App() {
             currentTab={currentTab}
           ></Description>
         )}
+      </div>
+      <div className="Test">
+        <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
+        <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
       </div>
     </div>
   );
