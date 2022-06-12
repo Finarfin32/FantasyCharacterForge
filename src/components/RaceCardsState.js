@@ -10,17 +10,20 @@ function RaceCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
   };
   return (
     <>
-      <div className="Human" onClick={() => setCardAndButtons(0)}>
-        <Card name="Human" />
-      </div>
-      <div className="Elf" onClick={() => setCardAndButtons(1)}>
-        <Card name="Elf" />
-      </div>
-      <div className="Dwarf" onClick={() => setCardAndButtons(2)}>
-        <Card name="Dwarf" />
-      </div>
-      <div className="Orc" onClick={() => setCardAndButtons(3)}>
-        <Card name="Orc" />
+      <div className="Invisible"></div>
+      <div className="Cards-box">
+        <div className="Human" onClick={() => setCardAndButtons(0)}>
+          <Card name="Human" />
+        </div>
+        <div className="Elf" onClick={() => setCardAndButtons(1)}>
+          <Card name="Elf" />
+        </div>
+        <div className="Dwarf" onClick={() => setCardAndButtons(2)}>
+          <Card name="Dwarf" />
+        </div>
+        <div className="Orc" onClick={() => setCardAndButtons(3)}>
+          <Card name="Orc" />
+        </div>
       </div>
     </>
   );

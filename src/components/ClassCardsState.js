@@ -12,17 +12,20 @@ function ClassCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
   //If "Rasy" picked (onClick) setCurrentTab to 0.
   return (
     <>
-      <div className="Warrior" onClick={() => setCardAndButtons(0)}>
-        <Card name="Warrior" />
-      </div>
-      <div className="Hunter" onClick={() => setCardAndButtons(1)}>
-        <Card name="Hunter" />
-      </div>
-      <div className="Mage" onClick={() => setCardAndButtons(2)}>
-        <Card name="Mage" />
-      </div>
-      <div className="Priest" onClick={() => setCardAndButtons(3)}>
-        <Card name="Priest" />
+      <div className="Invisible"></div>
+      <div className="Cards-box">
+        <div className="Warrior" onClick={() => setCardAndButtons(0)}>
+          <Card name="Warrior" />
+        </div>
+        <div className="Hunter" onClick={() => setCardAndButtons(1)}>
+          <Card name="Hunter" />
+        </div>
+        <div className="Mage" onClick={() => setCardAndButtons(2)}>
+          <Card name="Mage" />
+        </div>
+        <div className="Priest" onClick={() => setCardAndButtons(3)}>
+          <Card name="Priest" />
+        </div>
       </div>
     </>
   );

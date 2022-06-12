@@ -50,13 +50,15 @@ function App() {
         <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
         <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
       </div>
-      {currentTab !== 2 && (
-        <Description
-          pickedRaceCard={pickedRaceCard}
-          pickedClassCard={pickedClassCard}
-          currentTab={currentTab}
-        ></Description>
-      )}
+      <div className="Buttons2">
+        {currentTab !== 2 && (
+          <Description
+            pickedRaceCard={pickedRaceCard}
+            pickedClassCard={pickedClassCard}
+            currentTab={currentTab}
+          ></Description>
+        )}
+      </div>
     </div>
   );
 }

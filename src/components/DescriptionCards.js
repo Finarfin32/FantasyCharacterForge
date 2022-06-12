@@ -16,7 +16,7 @@ function Description({ currentTab, pickedRaceCard, pickedClassCard }) {
   return (
     <>
       <button
-        className="Arrow arrow arrow-left"
+        className="arrow-left"
         onClick={() => {
           setActiveCard(activeCard - 1);
         }}
@@ -25,7 +25,7 @@ function Description({ currentTab, pickedRaceCard, pickedClassCard }) {
         - Arrow left
       </button>
       <button
-        className="Arrow arrow arrow-right"
+        className="arrow-right"
         onClick={() => {
           setActiveCard(activeCard + 1);
         }}
@@ -33,6 +33,7 @@ function Description({ currentTab, pickedRaceCard, pickedClassCard }) {
       >
         Arrow right -
       </button>
+
       <div className="description">
         {/*If 0 show RACE_DESCRIPTION and activeCard */}
         {currentTab === 0 && <h3>{RACE_DESCRIPTION[activeCard]}</h3>}
