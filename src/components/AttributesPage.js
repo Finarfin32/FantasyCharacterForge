@@ -62,7 +62,6 @@ function AttributesPage() {
           <h1>Dynastia</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <input defaultValue="" {...register("dynasty")} />
-            <input type="submit" />
           </form>
         </div>
         <div className="attributes_col_realm">
@@ -105,7 +104,16 @@ function AttributesPage() {
           <h1>Rodzina</h1>
         </div>
       </div>
-      <div className="Footer"></div>
+      <div
+        className="Footer"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <input type="submit" />
+      </div>
     </div>
   );
 }
