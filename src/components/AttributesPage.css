@@ -1,0 +1,106 @@
+.container_attributes {
+  width: 100%;
+  height: 100%;
+  background: url(/src/media/background_attributes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 25px 5px black inset;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.TopBar {
+  width: 100%;
+  height: 5%;
+  color: rgb(250, 250, 250);
+}
+
+/* 
+.attributes_col {
+  border: white solid 1px;
+  color: rgb(250, 250, 250);
+  height: 19.5%;
+} */
+
+/*------------------LEFT--------------------*/
+
+.left_attributes_grid {
+  float: left;
+  color: rgb(250, 250, 250);
+  height: 90%;
+  width: 30%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.attributes_col_sex {
+  height: 10%;
+}
+
+.attributes_col_faith {
+  height: 10%;
+}
+
+.attributes_col_culture {
+  height: 10%;
+}
+
+.attributes_col_character_name {
+  height: 10%;
+}
+
+.attributes_col_dynasty {
+  height: 25%;
+}
+
+.attributes_col_realms {
+  height: 25%;
+}
+
+/*------------------MID--------------------*/
+
+.mid_attributes_grid {
+  float: left;
+  color: rgb(250, 250, 250);
+  height: 90%;
+  width: 38%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+/*------------------RIGHT--------------------*/
+
+.right_attributes_grid {
+  float: left;
+  color: rgb(250, 250, 250);
+  height: 90%;
+  width: 30%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.attributes_col_empty {
+  height: 8%;
+}
+.attributes_col_age {
+  height: 8%;
+}
+.attributes_col_weight {
+  height: 8%;
+}
+.attributes_col_traits {
+  height: 25%;
+}
+.attributes_col_skills {
+  height: 25%;
+}
+.attributes_col_family {
+  height: 6%;
+}
+
+.Footer {
+  width: 100%;
+  height: 5%;
+  color: rgb(250, 250, 250);
+  clear: both;
+}
