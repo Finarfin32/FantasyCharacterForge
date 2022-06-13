@@ -3,6 +3,8 @@ import "../App.css";
 import "./AttributesPage.css";
 import { useForm } from "react-hook-form";
 
+import TextField from "@mui/material/TextField";
+
 function AttributesPage() {
   const {
     register,
@@ -54,9 +56,17 @@ function AttributesPage() {
         <div className="attributes_col_character_name">
           <h1>Nazwa Postaci</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
+            <TextField
+              {...register("character_name", { required: true })}
+              id="standard-basic"
+              label="Standard"
+              variant="standard"
+            />
+          </form>
+          {/* <form onSubmit={handleSubmit(onSubmit)}>
             <input {...register("character_name", { required: true })} />
             {errors.character_name && <span>This field is required</span>}
-          </form>
+          </form> */}
         </div>
         <div className="attributes_col_dynasty">
           <h1>Dynastia</h1>
@@ -84,15 +94,25 @@ function AttributesPage() {
         </div>
         <div className="attributes_col_age">
           <h1>Wiek</h1>
-          <input type="range" placeholder="age" {...register("age", {})} />
+          <input
+            min="12"
+            max="85"
+            type="range"
+            placeholder="age"
+            {...register("age", {})}
+          />
+          <p style={{ float: "right" }}>{watch("age")}</p>
         </div>
         <div className="attributes_col_weight">
           <h1>Waga</h1>
           <input
+            min="20"
+            max="120"
             type="range"
             placeholder="weight"
             {...register("weight", {})}
           />
+          <p style={{ float: "right" }}>{watch("weight")}</p>
         </div>
         <div className="attributes_col_traits">
           <h1>Umiejętności</h1>
@@ -112,7 +132,9 @@ function AttributesPage() {
           alignItems: "center",
         }}
       >
-        <input type="submit" />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input type="submit" />
+        </form>
       </div>
     </div>
   );
