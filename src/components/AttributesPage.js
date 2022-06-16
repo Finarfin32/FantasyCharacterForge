@@ -8,16 +8,16 @@ function AttributesPage() {
   const onSubmit = (data) => console.log(data);
   console.log(watch("example"));
 
-  // const [count, setCount] = useState(0);
-  // const IncNum = () => {
-  //   setCount(count + 1);
-  // };
-  // const DecNum = () => {
-  //   if (count > 0) setCount(count - 1);
-  //   else {
-  //     setCount(0);
-  //   }
-  // };
+  const [count, setCount] = useState(0);
+  const IncNum = () => {
+    setCount(count + 1);
+  };
+  const DecNum = () => {
+    if (count > 0) setCount(count - 1);
+    else {
+      setCount(0);
+    }
+  };
 
   return (
     <div className="container_attributes">
@@ -38,31 +38,38 @@ function AttributesPage() {
         </div>
         <div className="attributes_col_faith">
           <h1>Wiara</h1>
-          <select {...register("faith", { required: true })}>
-            <option value="Wiara1">Wiara1</option>
-            <option value="Wiara2">Wiara2</option>
-            <option value="Wiara3">Wiara3</option>
-            <option value="Wiara4">Wiara4</option>
-            <option value="Wiara5">Wiara5</option>
-          </select>
+          <div className="select">
+            <select {...register("faith", { required: true })}>
+              <option value="Wiara1">Wiara1</option>
+              <option value="Wiara2">Wiara2</option>
+              <option value="Wiara3">Wiara3</option>
+              <option value="Wiara4">Wiara4</option>
+              <option value="Wiara5">Wiara5</option>
+            </select>
+            <div class="select_arrow"></div>
+          </div>
         </div>
 
         <div className="attributes_col_culture">
           <h1>Kultura</h1>
-          <select {...register("culture", { required: true })}>
-            <option value="Kultura1">Kultura1</option>
-            <option value="Kultura2"> Kultura2</option>
-            <option value="Kultura3"> Kultura3</option>
-            <option value="Kultura4"> Kultura4</option>
-            <option value="Kultura5"> Kultura5</option>
-          </select>
+          <div className="select">
+            <select {...register("culture", { required: true })}>
+              <option value="Kultura1">Kultura1</option>
+              <option value="Kultura2"> Kultura2</option>
+              <option value="Kultura3"> Kultura3</option>
+              <option value="Kultura4"> Kultura4</option>
+              <option value="Kultura5"> Kultura5</option>
+            </select>
+            <div class="select_arrow"></div>
+          </div>
         </div>
         <div className="attributes_col_character_name">
           <h1>Nazwa Postaci</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
+              className="css-input"
               type="text"
-              placeholder="character_name"
+              placeholder="Nazwa Postaci"
               {...register("character_name", {
                 required: true,
                 maxLength: 25,
@@ -74,21 +81,25 @@ function AttributesPage() {
           <h1>Dynastia</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
+              className="css-input"
               type="text"
-              placeholder="dynasty"
+              placeholder="Dynastia"
               {...register("dynasty", { required: true, maxLength: 20 })}
             />
           </form>
         </div>
         <div className="attributes_col_realm">
           <h1>Królestwo</h1>
-          <select {...register("realm", { required: true })}>
-            <option value="Królestwo1">Królestwo1</option>
-            <option value="Królestwo2"> Królestwo2</option>
-            <option value="Królestwo3"> Królestwo3</option>
-            <option value="Królestwo4"> Królestwo4</option>
-            <option value="Królestwo5">Królestwo5</option>
-          </select>
+          <div className="select">
+            <select {...register("realm", { required: true })}>
+              <option value="Królestwo1">Królestwo1</option>
+              <option value="Królestwo2"> Królestwo2</option>
+              <option value="Królestwo3"> Królestwo3</option>
+              <option value="Królestwo4"> Królestwo4</option>
+              <option value="Królestwo5">Królestwo5</option>
+            </select>
+            <div class="select_arrow"></div>
+          </div>
         </div>
       </div>
 
@@ -100,42 +111,57 @@ function AttributesPage() {
           <h1>Puste</h1>
         </div>
         <div className="attributes_col_age">
-          <h1>Wiek</h1>
+          <h1>
+            Wiek <p style={{ float: "right" }}>{watch("age")}</p>
+          </h1>
+          <span>
+            <i class="arrow left"></i>
+          </span>
           <input
+            className="istyle"
             min="12"
             max="85"
             type="range"
             placeholder="age"
             {...register("age", {})}
           />
-          <p style={{ float: "right" }}>{watch("age")}</p>
+          <span>
+            <i class="arrow right"></i>
+          </span>
         </div>
         <div className="attributes_col_weight">
-          <h1>Waga</h1>
+          <h1>
+            Waga <p style={{ float: "right" }}>{watch("weight")}</p>
+          </h1>
+
+          <span>
+            <i class="arrow left"></i>
+          </span>
           <input
+            className="istyle"
             min="20"
             max="120"
             type="range"
             placeholder="weight"
             {...register("weight", {})}
           />
-          <p style={{ float: "right" }}>{watch("weight")}</p>
+          <span>
+            <i class="arrow right"></i>
+          </span>
         </div>
         <div className="attributes_col_traits">
           <h1>Umiejętności</h1>
         </div>
         <div className="attributes_col_skills">
           <h1>Atrybuty</h1>
-          {/* <h1>{count}</h1> */}
+          <h1>{count}</h1>
+
           <div className="test">
-            {/* <form onSubmit={handleSubmit(onSubmit)}>
+            <button onClick={IncNum} {...register("Skills", {})}>
+              Dodaj
+            </button>
 
-                onClick={IncNum}
-                {...register("Skills", {})}
-
-                onClick={DecNum}
-
-            </form> */}
+            <button onClick={DecNum}>Odejmij</button>
           </div>
         </div>
         <div className="attributes_col_family">
