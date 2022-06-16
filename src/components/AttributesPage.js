@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import "../App.css";
 import "./AttributesPage.css";
-import { useForm } from "react-hook-form";
+import { useForm, FormProvider } from "react-hook-form";
+import CultureForm from "./CultureForm"
 
 function AttributesPage() {
-  const { register, handleSubmit, watch } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(watch("example"));
+  const methods = useForm();
+    const { register, handleSubmit, watch } = methods;
+  const onSubmit = (data) => {
+    data["skills"] = count; // and so on with other +/- skills
+    console.log(data);
+  }
 
   const [count, setCount] = useState(0);
   const IncNum = () => {
@@ -20,6 +24,7 @@ function AttributesPage() {
   };
 
   return (
+       <FormProvider {...methods} >
     <div className="container_attributes">
       <div className="TopBar"></div>
       <div className="left_attributes_grid">
@@ -49,20 +54,7 @@ function AttributesPage() {
             <div class="select_arrow"></div>
           </div>
         </div>
-
-        <div className="attributes_col_culture">
-          <h1>Kultura</h1>
-          <div className="select">
-            <select {...register("culture", { required: true })}>
-              <option value="Kultura1">Kultura1</option>
-              <option value="Kultura2"> Kultura2</option>
-              <option value="Kultura3"> Kultura3</option>
-              <option value="Kultura4"> Kultura4</option>
-              <option value="Kultura5"> Kultura5</option>
-            </select>
-            <div class="select_arrow"></div>
-          </div>
-        </div>
+        <CultureForm onSubmit={onSubmit}/>
         <div className="attributes_col_character_name">
           <h1>Nazwa Postaci</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -157,10 +149,9 @@ function AttributesPage() {
           <h1>{count}</h1>
 
           <div className="test">
-            <button onClick={IncNum} {...register("Skills", {})}>
+            <button onClick={IncNum}>
               Dodaj
             </button>
-
             <button onClick={DecNum}>Odejmij</button>
           </div>
         </div>
@@ -181,6 +172,7 @@ function AttributesPage() {
         </form>
       </div>
     </div>
+       </FormProvider>
   );
 }
 export default AttributesPage;
