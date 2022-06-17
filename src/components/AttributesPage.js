@@ -52,7 +52,7 @@ function AttributesPage() {
                 <option value="Wiara4">Wiara4</option>
                 <option value="Wiara5">Wiara5</option>
               </select>
-              <div class="select_arrow"></div>
+              <div className="select_arrow"></div>
             </div>
           </div>
           <CultureForm onSubmit={onSubmit} />
