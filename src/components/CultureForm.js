@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 import "./AttributesPage.css";
 import { useFormContext } from "react-hook-form";
 
 function CultureForm({ onSubmit }) {
-    const { register, handleSubmit, watch } = useFormContext();
+    const { register} = useFormContext();
   return (
       <div className="attributes_col_culture">
           <form onSubmit={onSubmit}>
