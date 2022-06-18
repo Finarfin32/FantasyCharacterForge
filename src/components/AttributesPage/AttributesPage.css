@@ -73,6 +73,14 @@
   text-align: center;
 }
 
+.attributes_col_avatar {
+  height: 70%;
+}
+
+.attributes_col_skills {
+  height: 20%;
+}
+
 /*------------------RIGHT--------------------*/
 
 .right_attributes_grid {
@@ -84,27 +92,24 @@
 }
 
 .attributes_col_empty {
-  height: 8%;
+  height: 15%;
   margin-right: 10%;
 }
 .attributes_col_age {
-  height: 8%;
+  height: 10%;
   margin-right: 10%;
 }
 .attributes_col_weight {
-  height: 8%;
+  height: 10%;
   margin-right: 10%;
 }
 .attributes_col_traits {
-  height: 25%;
+  height: 40%;
   margin-right: 10%;
 }
-.attributes_col_skills {
-  height: 25%;
-  margin-right: 10%;
-}
+
 .attributes_col_family {
-  height: 6%;
+  height: 15%;
   margin-right: 10%;
 }
 

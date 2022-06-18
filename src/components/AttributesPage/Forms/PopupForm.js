@@ -1,10 +1,10 @@
 import React from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import "./Popup.css";
+import "./PopupForm.css";
 import { useFormContext } from "react-hook-form";
 
-function Popup2({ onSubmit }) {
+function PopupForm({ onSubmit }) {
   const { register } = useFormContext();
   return (
     <Popup trigger={<button> Trigger</button>} position="left center">
@@ -27,4 +27,4 @@ function Popup2({ onSubmit }) {
   );
 }
 
-export default Popup2;
+export default PopupForm;

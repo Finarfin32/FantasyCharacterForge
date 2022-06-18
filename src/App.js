@@ -3,7 +3,7 @@ import "./shared.scss";
 import React, { useState } from "react";
 import RaceCardsState from "./components/RaceCardsState";
 import ClassCardsState from "./components/ClassCardsState";
-import AttributesPage from "./components/AttributesPage";
+import AttributesPage from "./components/AttributesPage/AttributesPage.js";
 import Description from "./components/DescriptionCards";
 import Buttons from "./components/Buttons";
 
