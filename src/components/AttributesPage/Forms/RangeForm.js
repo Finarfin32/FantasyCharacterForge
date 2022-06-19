@@ -8,9 +8,7 @@ function RangeForm() {
   return (
     <>
       <div className="attributes_col_age">
-        <h1>
-          Wiek <p style={{ float: "right" }}>{watch("age")}</p>
-        </h1>
+        <h1>Wiek: {watch("age") ? watch("age") : "12"}</h1>
         <span>
           <i className="arrow left"></i>
         </span>
@@ -20,6 +18,7 @@ function RangeForm() {
           max="85"
           type="range"
           placeholder="age"
+          defaultValue="12"
           {...register("age", {})}
         />
         <span>
@@ -27,9 +26,7 @@ function RangeForm() {
         </span>
       </div>
       <div className="attributes_col_weight">
-        <h1>
-          Waga <p style={{ float: "right" }}>{watch("weight")}</p>
-        </h1>
+        <h1>Waga: {watch("weight") ? watch("weight") : "20"}</h1>
 
         <span>
           <i className="arrow left"></i>
@@ -40,6 +37,7 @@ function RangeForm() {
           max="120"
           type="range"
           placeholder="weight"
+          defaultValue="20"
           {...register("weight", {})}
         />
         <span>

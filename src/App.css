@@ -14,7 +14,11 @@ body {
   /* display: flex; */
   /* justify-content: space-around;
   align-items: center; */
-  background: url(media/body-bg.png) repeat;
+  /* background: url(media/body-bg.png) repeat; */
+  background: url(media/background_attributes.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .cards {

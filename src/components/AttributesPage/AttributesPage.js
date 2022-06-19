@@ -12,6 +12,7 @@ import RealmForm from "./Forms/RealmForm";
 import AvatarForm from "./Forms/AvatarForm";
 import RangeForm from "./Forms/RangeForm";
 import FamilyForm from "./Forms/FamilyForm";
+import SkillsForm from "./Forms/SkillsForm";
 
 function AttributesPage() {
   const methods = useForm();
@@ -21,16 +22,7 @@ function AttributesPage() {
     console.log(data);
   };
 
-  const [count, setCount] = useState(0);
-  const IncNum = () => {
-    setCount(count + 1);
-  };
-  const DecNum = () => {
-    if (count > 0) setCount(count - 1);
-    else {
-      setCount(0);
-    }
-  };
+  const [count, setCount] = useState([0, 0, 0, 0, 0, 0]);
 
   return (
     <FormProvider {...methods}>
@@ -46,7 +38,8 @@ function AttributesPage() {
         </div>
         <div className="mid_attributes_grid">
           <AvatarForm />
-          <div className="attributes_col_skills">
+          <SkillsForm count={count} setCount={setCount} />
+          {/* <div className="attributes_col_skills">
             <h1>Atrybuty</h1>
             <h1>{count}</h1>
 
@@ -54,7 +47,7 @@ function AttributesPage() {
               <button onClick={IncNum}>Dodaj</button>
               <button onClick={DecNum}>Odejmij</button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="right_attributes_grid">
