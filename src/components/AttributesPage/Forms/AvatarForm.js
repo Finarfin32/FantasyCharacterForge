@@ -3,8 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import styles from "./AvatarForm.css";
 import "./AvatarForm.css";
 
-function AvatarForm() {
-  const [image, setImage] = useState();
+function AvatarForm(image, setImage) {
   const [preview, setPreview] = useState();
   const fileInputRef = useRef();
 
@@ -14,7 +13,7 @@ function AvatarForm() {
       reader.onloadend = () => {
         setPreview(reader.result);
       };
-      reader.readAsDataURL(image);
+      // reader.readAsDataURL(image);
     } else {
       setPreview(null);
     }
@@ -24,24 +23,25 @@ function AvatarForm() {
       <h1>Wyświetlanie awatara</h1>
       <div className={styles.container}>
         <form>
-          {preview ? (
+          {preview && (
             <img
               src={preview}
-              style={{ objectFit: "cover" }}
-              onClick={() => {
-                setImage(null);
+              style={{
+                objectFit: "scale-down",
+                width: "200px",
+                height: "300px",
               }}
             />
-          ) : (
-            <button
-              onClick={(event) => {
-                event.preventDefault();
-                fileInputRef.current.click();
-              }}
-            >
-              Add Image
-            </button>
           )}
+          <button
+            onClick={(event) => {
+              event.preventDefault();
+              fileInputRef.current.click();
+            }}
+          >
+            Dodaj zdjęcie
+          </button>
+
           <input
             type="file"
             style={{ display: "none" }}

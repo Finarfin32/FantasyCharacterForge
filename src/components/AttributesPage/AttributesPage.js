@@ -17,13 +17,14 @@ import SkillsForm from "./Forms/SkillsForm";
 function AttributesPage() {
   const methods = useForm();
   const { handleSubmit } = methods;
-  const onSubmit = (data) => {
+  const onSubmit = (data, avatar) => {
     data["skills"] = count; // and so on with other +/- skills
+    avatar = image;
     console.log(data);
   };
 
   const [count, setCount] = useState([0, 0, 0, 0, 0, 0]);
-
+  const [image, setImage] = useState("");
   return (
     <FormProvider {...methods}>
       <div className="container_attributes">
@@ -37,17 +38,8 @@ function AttributesPage() {
           <RealmForm />
         </div>
         <div className="mid_attributes_grid">
-          <AvatarForm />
+          <AvatarForm image={image} setImage={setImage} />
           <SkillsForm count={count} setCount={setCount} />
-          {/* <div className="attributes_col_skills">
-            <h1>Atrybuty</h1>
-            <h1>{count}</h1>
-
-            <div className="test">
-              <button onClick={IncNum}>Dodaj</button>
-              <button onClick={DecNum}>Odejmij</button>
-            </div>
-          </div> */}
         </div>
 
         <div className="right_attributes_grid">
