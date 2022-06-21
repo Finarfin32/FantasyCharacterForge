@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import styles from "./AvatarForm.css";
 import "./AvatarForm.css";
 
-function AvatarForm(image, setImage) {
+function AvatarForm({ image, setImage }) {
   const [preview, setPreview] = useState();
   const fileInputRef = useRef();
 
@@ -13,7 +13,7 @@ function AvatarForm(image, setImage) {
       reader.onloadend = () => {
         setPreview(reader.result);
       };
-      // reader.readAsDataURL(image);
+      reader.readAsDataURL(image);
     } else {
       setPreview(null);
     }
