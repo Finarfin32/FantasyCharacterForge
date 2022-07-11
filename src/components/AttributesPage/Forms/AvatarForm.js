@@ -21,7 +21,7 @@ function AvatarForm({ image, setImage }) {
   return (
     <div className="attributes_col_avatar">
       <h1>Wyświetlanie awatara</h1>
-      <div className={styles.container}>
+      <div className={styles.container} id="ImageTest">
         <form>
           {preview && (
             <img
@@ -33,14 +33,16 @@ function AvatarForm({ image, setImage }) {
               }}
             />
           )}
-          <button
-            onClick={(event) => {
-              event.preventDefault();
-              fileInputRef.current.click();
-            }}
-          >
-            Dodaj zdjęcie
-          </button>
+          <div className="ButtonTest">
+            <button
+              onClick={(event) => {
+                event.preventDefault();
+                fileInputRef.current.click();
+              }}
+            >
+              Dodaj zdjęcie
+            </button>
+          </div>
 
           <input
             type="file"
