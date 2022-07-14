@@ -3,27 +3,16 @@ import Attribute from "./AttributeForm";
 import "./SkillsForm.css";
 
 function SkillsForm({ count, setCount }) {
-  const numbers = [0, 1, 2];
-
+  const tab = ["strenght", "dexterity", "intelligence"];
   return (
     <div className="attributes_col_skills">
       <ul>
-        {numbers.map((number) => (
-          <Attribute key={number.toString()} value={number} />
+        {tab.map((value, id) => (
+          <div key={id} className={value}>
+            <Attribute setCount={setCount} count={count} attrname={id} />
+          </div>
         ))}
       </ul>
-
-      {/* <div className="strenght">
-        <Attribute setCount={setCount} count={count} attrname={0} />
-      </div>
-
-      <div className="dexterity">
-        <Attribute setCount={setCount} count={count} attrname={1} />
-      </div>
-
-      <div className="intelligence">
-        <Attribute setCount={setCount} count={count} attrname={2} />
-      </div> */}
     </div>
   );
 }
