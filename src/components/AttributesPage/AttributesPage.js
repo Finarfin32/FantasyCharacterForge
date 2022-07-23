@@ -14,16 +14,23 @@ import RangeForm from "./Forms/RangeForm";
 import FamilyForm from "./Forms/FamilyForm";
 import SkillsForm from "./Forms/SkillsForm";
 
-function AttributesPage() {
+function AttributesPage({ pickedRaceCard, pickedClassCard }) {
   const methods = useForm();
   const { handleSubmit } = methods;
   const onSubmit = (data, avatar) => {
-    data["skills"] = count; // and so on with other +/- skills
+    data["skills"] = {
+      strenght: count1,
+      dexterity: count2,
+      intelligence: count3,
+    };
     avatar = image;
     console.log(data);
   };
 
-  const [count, setCount] = useState([0, 0, 0, 0, 0, 0]);
+  const [count1, setCount1] = useState(0);
+  const [count2, setCount2] = useState(0);
+  const [count3, setCount3] = useState(0);
+
   const [image, setImage] = useState("");
   return (
     <FormProvider {...methods}>
@@ -39,7 +46,14 @@ function AttributesPage() {
         </div>
         <div className="mid_attributes_grid">
           <AvatarForm image={image} setImage={setImage} />
-          <SkillsForm count={count} setCount={setCount} />
+          <SkillsForm
+            count1={count1}
+            count2={count2}
+            count3={count3}
+            setCount1={setCount1}
+            setCount2={setCount2}
+            setCount3={setCount3}
+          />
         </div>
 
         <div className="right_attributes_grid">
@@ -65,6 +79,10 @@ function AttributesPage() {
             <input type="submit" />
           </form>
         </div>
+      </div>
+      <div className="Test">
+        <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
+        <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
       </div>
     </FormProvider>
   );

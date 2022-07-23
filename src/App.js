@@ -45,7 +45,12 @@ function App() {
         />
       )}
       {/*if current tab 2 show AttributesPage with div Test and Description */}
-      {currentTab === 2 && <AttributesPage />}
+      {currentTab === 2 && (
+        <AttributesPage
+          pickedRaceCard={pickedRaceCard}
+          pickedClassCard={pickedClassCard}
+        />
+      )}
       <div className="Buttons2">
         {currentTab !== 2 && (
           <Description

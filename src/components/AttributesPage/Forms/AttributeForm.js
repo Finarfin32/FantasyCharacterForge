@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Attribute() {
-  const [count, setCount] = useState(0);
+function Attribute({ count, setCount, name }) {
   const IncNum = () => {
     setCount(count + 1);
   };
@@ -14,7 +13,7 @@ function Attribute() {
 
   return (
     <>
-      <h1>Atrybuty</h1>
+      <h1>{name}</h1>
       <h1>{count}</h1>
       <div className="test">
         <button onClick={IncNum}>Dodaj</button>
