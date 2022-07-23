@@ -1,13 +1,9 @@
 .container_attributes {
   width: 100%;
   height: 100%;
-
-  /* background: url(/src/media/background_attributes.png); */
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0px 0px 25px 5px black inset;
-  /* display: flex;
-  justify-content: center; */
 }
 
 .TopBar {
@@ -15,13 +11,6 @@
   height: 5%;
   color: rgb(250, 250, 250);
 }
-
-/* 
-.attributes_col {
-  border: white solid 1px;
-  color: rgb(250, 250, 250);
-  height: 19.5%;
-} */
 
 /*------------------LEFT--------------------*/
 
@@ -76,10 +65,6 @@
 .attributes_col_avatar {
   height: 70%;
 }
-
-/* .attributes_col_skills {
-  height: 20%;
-} */
 
 /*------------------RIGHT--------------------*/
 
