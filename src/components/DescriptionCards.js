@@ -14,7 +14,7 @@ function Description({ currentTab, pickedRaceCard, pickedClassCard }) {
   }, [currentTab, pickedRaceCard, pickedClassCard]);
 
   return (
-    <>
+    <><div className="ButtonsDescription">
       <button
         className="arrow-left"
         onClick={() => {
@@ -33,7 +33,7 @@ function Description({ currentTab, pickedRaceCard, pickedClassCard }) {
       >
         Arrow right -
       </button>
-
+      </div>
       <div className="description">
         {/*If 0 show RACE_DESCRIPTION and activeCard */}
         {currentTab === 0 && <h3>{RACE_DESCRIPTION[activeCard]}</h3>}

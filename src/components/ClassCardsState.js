@@ -1,6 +1,10 @@
 import React from "react";
 import Card from "./RaceCards.js";
 import "../App.css";
+import Warrior from "../media/Warrior.jpg";
+import Hunter from "../media/Hunter.jpg";
+import Mage from "../media/Mage.jpg";
+import Priest from "../media/Priest.jpg";
 
 function ClassCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
   //superior function
@@ -15,16 +19,16 @@ function ClassCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
       <div className="Invisible"></div>
       <div className="Cards-box">
         <div className="Warrior" onClick={() => setCardAndButtons(0)}>
-          <Card name="Warrior" />
+          <Card name="Warrior" src={Warrior} />
         </div>
         <div className="Hunter" onClick={() => setCardAndButtons(1)}>
-          <Card name="Hunter" />
+          <Card name="Hunter" src={Hunter}/>
         </div>
         <div className="Mage" onClick={() => setCardAndButtons(2)}>
-          <Card name="Mage" />
+          <Card name="Mage" src={Mage}/>
         </div>
         <div className="Priest" onClick={() => setCardAndButtons(3)}>
-          <Card name="Priest" />
+          <Card name="Priest" src={Priest}/>
         </div>
       </div>
     </>

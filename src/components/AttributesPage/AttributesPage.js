@@ -67,6 +67,7 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
           </div>
           <FamilyForm />
         </div>
+
         <div
           className="Footer"
           style={{
@@ -85,6 +86,7 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
         <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
       </div>
     </FormProvider>
+    
   );
 }
 export default AttributesPage;

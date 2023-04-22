@@ -1,11 +1,14 @@
 import React from "react";
 import "../App.css";
 //Show Card name
-function Card({ name }) {
+function Card({ name, src }) {
   return (
+    <>
     <div className="cards">
-      <h3>{name}</h3>
+      <img src={src} alt={name} />
     </div>
+    <div className="cards-name"> <h3>{name}</h3></div>
+    </>
   );
 }
 

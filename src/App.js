@@ -60,10 +60,6 @@ function App() {
           ></Description>
         )}
       </div>
-      <div className="Test">
-        <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
-        <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
-      </div>
     </div>
   );
 }
