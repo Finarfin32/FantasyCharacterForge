@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../App.css";
 import { RACE_DESCRIPTION, CLASS_DESCRIPTION } from "../consts/description";
 //a function that checks which card has been selected
 //by passing the 3 arguments from parent
-function Description({ currentTab, pickedRaceCard, pickedClassCard }) {
-  const [activeCard, setActiveCard] = useState(0);
+function Description({ currentTab, pickedRaceCard, pickedClassCard, activeCard, setActiveCard }) {
+  
   useEffect(() => {
     if (currentTab === 0 && pickedRaceCard !== "Not selected")
       setActiveCard(pickedRaceCard);
     else if (currentTab === 1 && pickedClassCard !== "Not selected")
       setActiveCard(pickedClassCard);
     else setActiveCard(0);
-  }, [currentTab, pickedRaceCard, pickedClassCard]);
+  }, [currentTab, pickedRaceCard, pickedClassCard, setActiveCard]);
 
   return (
     <><div className="ButtonsDescription">

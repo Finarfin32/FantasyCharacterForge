@@ -6,7 +6,8 @@ import Hunter from "../media/Hunter.jpg";
 import Mage from "../media/Mage.jpg";
 import Priest from "../media/Priest.jpg";
 
-function ClassCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
+function ClassCardsState({ setpickedCard, handleSubmit, setCurrentTab, activeCard }) {
+  console.log(activeCard);
   //superior function
   const setCardAndButtons = (classOfCard) => {
     setpickedCard(classOfCard); //sets the card???
@@ -19,16 +20,16 @@ function ClassCardsState({ setpickedCard, handleSubmit, setCurrentTab }) {
       <div className="Invisible"></div>
       <div className="Cards-box">
         <div className="Warrior" onClick={() => setCardAndButtons(0)}>
-          <Card name="Warrior" src={Warrior} />
+          <Card name="Warrior" src={Warrior} isActive={activeCard===0 ? true : false}/>
         </div>
         <div className="Hunter" onClick={() => setCardAndButtons(1)}>
-          <Card name="Hunter" src={Hunter}/>
+          <Card name="Hunter" src={Hunter} isActive={activeCard===1 ? true : false}/>
         </div>
         <div className="Mage" onClick={() => setCardAndButtons(2)}>
-          <Card name="Mage" src={Mage}/>
+          <Card name="Mage" src={Mage} isActive={activeCard===2 ? true : false}/>
         </div>
         <div className="Priest" onClick={() => setCardAndButtons(3)}>
-          <Card name="Priest" src={Priest}/>
+          <Card name="Priest" src={Priest} isActive={activeCard===3 ? true : false}/>
         </div>
       </div>
     </>

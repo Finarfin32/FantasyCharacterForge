@@ -12,6 +12,7 @@ function App() {
   const [pickedClassCard, setpickedClassCard] = useState("Not selected");
   const [currentTab, setCurrentTab] = useState(0);
   const [isDisabled, setDisabled] = useState([false, true, true]);
+  const [activeCard, setActiveCard] = useState(0);
 
   //Function locks the buttons if (currentTab && pickedRaceCard) - true
   //Function change array setDisabled
@@ -34,6 +35,7 @@ function App() {
           setpickedCard={setpickedRaceCard}
           handleSubmit={handleSubmit}
           setCurrentTab={setCurrentTab}
+          activeCard={activeCard}
         />
       )}
       {/*if current tab 1 show ClassCardState with 3 properties */}
@@ -42,6 +44,7 @@ function App() {
           setpickedCard={setpickedClassCard}
           handleSubmit={handleSubmit}
           setCurrentTab={setCurrentTab}
+          activeCard={activeCard}
         />
       )}
       {/*if current tab 2 show AttributesPage with div Test and Description */}
@@ -57,6 +60,8 @@ function App() {
             pickedRaceCard={pickedRaceCard}
             pickedClassCard={pickedClassCard}
             currentTab={currentTab}
+            activeCard={activeCard}
+            setActiveCard={setActiveCard}
           ></Description>
         )}
       </div>
