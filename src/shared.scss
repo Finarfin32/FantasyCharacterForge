@@ -63,7 +63,7 @@
 }
 
 .draw-border {
-  @include btn-border-drawing(#58afd1, #ffe593, 4px, bottom, right);
+  @include btn-border-drawing(#D2C8AE, #ffa000, 4px, bottom, right);
 }
 
 //=== Button styling, semi-ignore
@@ -72,21 +72,16 @@
   border: none;
   cursor: url("media/pointer.png"), auto;
   line-height: 1.5;
-  font: 700 1.2rem "Roboto Slab", sans-serif;
+  font: 700 0.9rem "Old Fenris", "Roboto Slab", sans-serif;
   padding: 1em 2em;
   letter-spacing: 0.05rem;
-
-  &:focus {
-    outline: 2px dotted #55d7dc;
-  }
 }
 
 .btn-tab:disabled,
 .btn-tab[disabled] {
-  border: 1px solid #999999;
-  background-color: #cccccc;
+  background-color: #797979;
   color: #666666;
   animation: none;
   cursor: not-allowed;
-  @include btn-border-drawing(#58afd1, #f50000, 4px, bottom, right);
+  @include btn-border-drawing(#D2C8AE, #f50000, 4px, bottom, right);
 }

@@ -33,6 +33,18 @@ function Buttons({ setCurrentTab, isDisabled }) {
       >
         Atrybuty postaci
       </button>
+
+      &nbsp;&nbsp;&nbsp;
+      <button
+        className="btn-tab draw-border"
+        onClick={() => {
+          setCurrentTab(2); //2
+        }}
+        disabled={isDisabled[2]} //[false, false, false]
+      >
+        Podsumowanie
+      </button>
+
     </div>
   );
 }
