@@ -3,8 +3,13 @@ import "../App.css";
 import { RACE_DESCRIPTION, CLASS_DESCRIPTION } from "../consts/description";
 //a function that checks which card has been selected
 //by passing the 3 arguments from parent
-function Description({ currentTab, pickedRaceCard, pickedClassCard, activeCard, setActiveCard }) {
-  
+function Description({
+  currentTab,
+  pickedRaceCard,
+  pickedClassCard,
+  activeCard,
+  setActiveCard,
+}) {
   useEffect(() => {
     if (currentTab === 0 && pickedRaceCard !== "Not selected")
       setActiveCard(pickedRaceCard);
@@ -14,25 +19,26 @@ function Description({ currentTab, pickedRaceCard, pickedClassCard, activeCard, 
   }, [currentTab, pickedRaceCard, pickedClassCard, setActiveCard]);
 
   return (
-    <><div className="ButtonsDescription">
-      <button
-        className="arrow-left"
-        onClick={() => {
-          setActiveCard(activeCard - 1);
-        }}
-        disabled={activeCard === 0 ? true : false} //Array 4 elements - 0-3 if 0 disable onclick and block movment to the left.
-      >
-        - Arrow left
-      </button>
-      <button
-        className="arrow-right"
-        onClick={() => {
-          setActiveCard(activeCard + 1);
-        }}
-        disabled={activeCard === 3 ? true : false} //if 3 disable onclick and block movment to the left.
-      >
-        Arrow right -
-      </button>
+    <>
+      <div className="ButtonsDescription">
+        <button
+          className="arrow-left"
+          onClick={() => {
+            setActiveCard(activeCard - 1);
+          }}
+          disabled={activeCard === 0 ? true : false} //Array 4 elements - 0-3 if 0 disable onclick and block movment to the left.
+        >
+          - Arrow left
+        </button>
+        <button
+          className="arrow-right"
+          onClick={() => {
+            setActiveCard(activeCard + 1);
+          }}
+          disabled={activeCard === 3 ? true : false} //if 3 disable onclick and block movment to the left.
+        >
+          Arrow right -
+        </button>
       </div>
       <div className="description">
         {/*If 0 show RACE_DESCRIPTION and activeCard */}

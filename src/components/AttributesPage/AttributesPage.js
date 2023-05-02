@@ -86,7 +86,6 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
         <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
       </div>
     </FormProvider>
-    
   );
 }
 export default AttributesPage;

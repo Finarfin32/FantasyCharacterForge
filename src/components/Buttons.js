@@ -33,7 +33,6 @@ function Buttons({ setCurrentTab, isDisabled }) {
       >
         Atrybuty postaci
       </button>
-
       &nbsp;&nbsp;&nbsp;
       <button
         className="btn-tab draw-border"
@@ -44,7 +43,6 @@ function Buttons({ setCurrentTab, isDisabled }) {
       >
         Podsumowanie
       </button>
-
     </div>
   );
 }

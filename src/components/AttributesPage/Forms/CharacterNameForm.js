@@ -1,8 +1,14 @@
 import React from "react";
+import "./CharacterNameForm.css";
 import { useFormContext } from "react-hook-form";
 
 function CharacherNameForm({ onSubmit }) {
-  const { register, handleSubmit } = useFormContext();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useFormContext();
+  console.log(errors);
   return (
     <div className="attributes_col_character_name">
       <h1>Nazwa Postaci</h1>
@@ -12,10 +18,13 @@ function CharacherNameForm({ onSubmit }) {
           type="text"
           placeholder="Nazwa Postaci"
           {...register("character_name", {
-            required: true,
-            maxLength: 25,
+            required: "To pole jest wymagane",
+            maxLength: 45,
           })}
         />
+        {errors.character_name && (
+          <p className="errors_message">{errors.character_name.message}</p>
+        )}
       </form>
     </div>
   );
