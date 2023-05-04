@@ -3,8 +3,9 @@ import { useRef, useState, useEffect } from "react";
 import styles from "./AvatarForm.css";
 import "./AvatarForm.css";
 
-function AvatarForm({ image, setImage }) {
+function AvatarForm({ image, onImageSave }) {
   const [preview, setPreview] = useState();
+  const [selectedImage, setSelectedImage] = useState();
   const fileInputRef = useRef();
 
   useEffect(() => {
@@ -18,11 +19,17 @@ function AvatarForm({ image, setImage }) {
       setPreview(null);
     }
   }, [image]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onImageSave(selectedImage);
+  };
+
   return (
     <div className="attributes_col_avatar">
       <h1>Wyświetlanie awatara</h1>
       <div className={styles.container} id="ImageTest">
-        <form>
+        <form onSubmit={handleSubmit}>
           {preview && (
             <img
               alt="Avatar"
@@ -35,6 +42,7 @@ function AvatarForm({ image, setImage }) {
             />
           )}
           <div className="ButtonTest">
+            <button type="submit">Zapisz</button>
             <button
               onClick={(event) => {
                 event.preventDefault();
@@ -53,9 +61,11 @@ function AvatarForm({ image, setImage }) {
             onChange={(event) => {
               const file = event.target.files[0];
               if (file && file.type.substring(0, 5) === "image") {
-                setImage(file);
+                setSelectedImage(file);
+                setPreview(URL.createObjectURL(file));
               } else {
-                setImage(null);
+                setSelectedImage(null);
+                setPreview(null);
               }
             }}
           />

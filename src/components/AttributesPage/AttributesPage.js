@@ -7,7 +7,7 @@ import PopupForm from "./Forms/PopupForm";
 import DynastyForm from "./Forms/DynastyForm";
 import SexForm from "./Forms/SexForm";
 import FaithForm from "./Forms/FaithForm";
-import CharacherNameForm from "./Forms/CharacterNameForm";
+import CharacterNameForm from "./Forms/CharacterNameForm";
 import RealmForm from "./Forms/RealmForm";
 import AvatarForm from "./Forms/AvatarForm";
 import RangeForm from "./Forms/RangeForm";
@@ -31,7 +31,16 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
 
-  const [image, setImage] = useState("");
+  const [image] = useState("");
+
+  const [selectedImage, setSelectedImage] = useState();
+
+  const handleImageSave = (image) => {
+    setSelectedImage(image);
+  };
+
+  console.log("Zapisano zdjęcie:", selectedImage);
+
   return (
     <FormProvider {...methods}>
       <div className="container_attributes">
@@ -40,12 +49,12 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
           <SexForm />
           <FaithForm />
           <CultureForm onSubmit={onSubmit} />
-          <CharacherNameForm onSubmit={onSubmit} />
+          <CharacterNameForm onSubmit={onSubmit} />
           <DynastyForm onSubmit={onSubmit} />
           <RealmForm />
         </div>
         <div className="mid_attributes_grid">
-          <AvatarForm image={image} setImage={setImage} />
+          <AvatarForm setImage={() => {}} onImageSave={handleImageSave} />
           <SkillsForm
             count1={count1}
             count2={count2}

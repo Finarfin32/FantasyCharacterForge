@@ -2,7 +2,7 @@ import React from "react";
 import "./CharacterNameForm.css";
 import { useFormContext } from "react-hook-form";
 
-function CharacherNameForm({ onSubmit }) {
+function CharacterNameForm({ onSubmit }) {
   const {
     register,
     handleSubmit,
@@ -22,11 +22,11 @@ function CharacherNameForm({ onSubmit }) {
             maxLength: 45,
           })}
         />
-        {errors.character_name && (
-          <p className="errors_message">{errors.character_name.message}</p>
-        )}
       </form>
+      {errors.character_name && (
+        <p className="errors_message">{errors.character_name.message}</p>
+      )}
     </div>
   );
 }
-export default CharacherNameForm;
+export default CharacterNameForm;
