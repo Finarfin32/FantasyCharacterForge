@@ -43,12 +43,17 @@
 }
 
 .attributes_col_dynasty {
-  height: 25%;
+  height: 10%;
   margin-left: 10%;
 }
 
 .attributes_col_realm {
   height: 25%;
+  margin-left: 10%;
+}
+
+.attributes_col_family {
+  height: 10%;
   margin-left: 10%;
 }
 

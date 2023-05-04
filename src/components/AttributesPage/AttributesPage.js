@@ -32,9 +32,7 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
   const [count3, setCount3] = useState(0);
 
   const [image] = useState("");
-
   const [selectedImage, setSelectedImage] = useState();
-
   const handleImageSave = (image) => {
     setSelectedImage(image);
   };
@@ -47,10 +45,11 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
         <div className="TopBar"></div>
         <div className="left_attributes_grid">
           <SexForm />
-          <FaithForm />
-          <CultureForm onSubmit={onSubmit} />
           <CharacterNameForm onSubmit={onSubmit} />
           <DynastyForm onSubmit={onSubmit} />
+          <FamilyForm onSubmit={onSubmit} />
+          <FaithForm />
+          <CultureForm onSubmit={onSubmit} />
           <RealmForm />
         </div>
         <div className="mid_attributes_grid">
@@ -66,15 +65,11 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
         </div>
 
         <div className="right_attributes_grid">
-          <div className="attributes_col_empty">
-            <h1>Puste</h1>
-          </div>
           <RangeForm />
           <div className="attributes_col_traits">
             <h1>Umiejętności</h1>
             <PopupForm onSubmit={onSubmit}></PopupForm>
           </div>
-          <FamilyForm />
         </div>
 
         <div
