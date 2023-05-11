@@ -22,7 +22,14 @@ function ClassCardsState({
   //If "Rasy" picked (onClick) setCurrentTab to 0.
   return (
     <>
-      <div className="Invisible"></div>
+      <div className="header-top">
+        <h1 class="header-title">Klasa postaci</h1>
+        <p class="header-description">
+          Od rycerzy w lśniących zbrojach po skradających się prześladowców i
+          przebiegłych czarowników, każda klasa oferuje unikalne wyzwania i
+          rozgrywkę, które musisz opanować. Jakie jest twoje powołanie?
+        </p>
+      </div>
       <div className="Cards-box">
         <div className="Warrior" onClick={() => setCardAndButtons(0)}>
           <Card

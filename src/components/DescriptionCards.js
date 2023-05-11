@@ -28,8 +28,9 @@ function Description({
           }}
           disabled={activeCard === 0 ? true : false} //Array 4 elements - 0-3 if 0 disable onclick and block movment to the left.
         >
-          - Arrow left
+          Przewiń w lewo
         </button>
+        <button className="arrow-sub">Potwierdź</button>
         <button
           className="arrow-right"
           onClick={() => {
@@ -37,7 +38,7 @@ function Description({
           }}
           disabled={activeCard === 3 ? true : false} //if 3 disable onclick and block movment to the left.
         >
-          Arrow right -
+          Przewiń w prawo
         </button>
       </div>
       <div className="description">

@@ -20,7 +20,14 @@ function RaceCardsState({
   };
   return (
     <>
-      <div className="Invisible"></div>
+      <div className="header-top">
+        <h1 class="header-title">Rasa postaci</h1>
+        <p class="header-description">
+          Od wysokich elfów i krasnoludów po dzikusów trolli i orków, każda rasa
+          oferuje unikalne umiejętności i styl gry, które musisz opanować. Jakie
+          jest twoje powołanie?
+        </p>
+      </div>
       <div className="Cards-box">
         <div className="Human" onClick={() => setCardAndButtons(0)}>
           <Card
