@@ -42,8 +42,11 @@ function AvatarForm({ image, onImageSave }) {
             />
           )}
           <div className="ButtonTest">
-            <button type="submit">Zapisz</button>
+            <button className="avatarButtons" type="submit">
+              Zapisz
+            </button>
             <button
+              className="avatarButtons"
               onClick={(event) => {
                 event.preventDefault();
                 fileInputRef.current.click();
