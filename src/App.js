@@ -8,8 +8,8 @@ import Description from "./components/DescriptionCards";
 import Buttons from "./components/Buttons";
 
 function App() {
-  const [pickedRaceCard, setpickedRaceCard] = useState("Not selected");
-  const [pickedClassCard, setpickedClassCard] = useState("Not selected");
+  const [pickedRaceCard, setPickedRaceCard] = useState("Not selected");
+  const [pickedClassCard, setPickedClassCard] = useState("Not selected");
   const [currentTab, setCurrentTab] = useState(0);
   const [isDisabled, setDisabled] = useState([false, true, true]);
   const [activeCard, setActiveCard] = useState(0);
@@ -24,29 +24,16 @@ function App() {
     } else {
       setDisabled([false, false, false]);
     }
+    setCurrentTab(currentTab + 1);
   };
   return (
     <div className="app">
       <Buttons setCurrentTab={setCurrentTab} isDisabled={isDisabled}></Buttons>{" "}
       {/* Component / shows Buttons / set their state */}
       {/*if current tab 0 show RaceCardState with 3 properties */}
-      {currentTab === 0 && (
-        <RaceCardsState
-          setpickedCard={setpickedRaceCard}
-          handleSubmit={handleSubmit}
-          setCurrentTab={setCurrentTab}
-          activeCard={activeCard}
-        />
-      )}
+      {currentTab === 0 && <RaceCardsState activeCard={activeCard} />}
       {/*if current tab 1 show ClassCardState with 3 properties */}
-      {currentTab === 1 && (
-        <ClassCardsState
-          setpickedCard={setpickedClassCard}
-          handleSubmit={handleSubmit}
-          setCurrentTab={setCurrentTab}
-          activeCard={activeCard}
-        />
-      )}
+      {currentTab === 1 && <ClassCardsState activeCard={activeCard} />}
       {/*if current tab 2 show AttributesPage with div Test and Description */}
       {currentTab === 2 && (
         <AttributesPage
@@ -62,6 +49,9 @@ function App() {
             currentTab={currentTab}
             activeCard={activeCard}
             setActiveCard={setActiveCard}
+            setPickedRaceCard={setPickedRaceCard}
+            setPickedClassCard={setPickedClassCard}
+            handleSubmit={handleSubmit}
           ></Description>
         )}
       </div>

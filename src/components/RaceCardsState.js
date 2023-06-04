@@ -6,18 +6,7 @@ import Elf from "../media/Elf.jpg";
 import Dwarf from "../media/Dwarf.jpg";
 import Demon from "../media/Demon.jpg";
 
-function RaceCardsState({
-  setpickedCard,
-  handleSubmit,
-  setCurrentTab,
-  activeCard,
-}) {
-  console.log(activeCard);
-  const setCardAndButtons = (raceOfCard) => {
-    setpickedCard(raceOfCard);
-    handleSubmit(); //same as classcards
-    setCurrentTab(1);
-  };
+function RaceCardsState({ activeCard }) {
   return (
     <>
       <div className="header-top">
@@ -29,28 +18,28 @@ function RaceCardsState({
         </p>
       </div>
       <div className="Cards-box">
-        <div className="Human" onClick={() => setCardAndButtons(0)}>
+        <div className="Human">
           <Card
             name="Human"
             src={Human}
             isActive={activeCard === 0 ? true : false}
           />
         </div>
-        <div className="Elf" onClick={() => setCardAndButtons(1)}>
+        <div className="Elf">
           <Card
             name="Elf"
             src={Elf}
             isActive={activeCard === 1 ? true : false}
           />
         </div>
-        <div className="Dwarf" onClick={() => setCardAndButtons(2)}>
+        <div className="Dwarf">
           <Card
             name="Dwarf"
             src={Dwarf}
             isActive={activeCard === 2 ? true : false}
           />
         </div>
-        <div className="Demon" onClick={() => setCardAndButtons(3)}>
+        <div className="Demon">
           <Card
             name="Demon"
             src={Demon}

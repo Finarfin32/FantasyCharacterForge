@@ -9,6 +9,9 @@ function Description({
   pickedClassCard,
   activeCard,
   setActiveCard,
+  setPickedRaceCard,
+  setPickedClassCard,
+  handleSubmit,
 }) {
   useEffect(() => {
     if (currentTab === 0 && pickedRaceCard !== "Not selected")
@@ -17,6 +20,12 @@ function Description({
       setActiveCard(pickedClassCard);
     else setActiveCard(0);
   }, [currentTab, pickedRaceCard, pickedClassCard, setActiveCard]);
+
+  const setPickedCard = () => {
+    if (currentTab === 0) setPickedRaceCard(activeCard);
+    else setPickedClassCard(activeCard);
+    handleSubmit();
+  };
 
   return (
     <>
@@ -30,7 +39,9 @@ function Description({
         >
           Przewiń w lewo
         </button>
-        <button className="arrow-sub">Potwierdź</button>
+        <button onClick={setPickedCard} className="arrow-sub">
+          Potwierdź
+        </button>
         <button
           className="arrow-right"
           onClick={() => {
