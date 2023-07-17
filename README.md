@@ -1,3 +1,19 @@
+![Logo](https://images89.fotosik.pl/675/ff252cf94f935b9b.png)
+
+# Fantasy Character Forge
+
+Fantasy Character Forge is a tool that allows you to create unique characters for tabletop role-playing games or fantasy stories. This creator offers a unique combination of features that make the character creation process enjoyable and inspiring.
+
+The main feature of this creator is the use of character cards. Each card contains different character statistics. You can easily select cards and view their descriptions.
+One of the standout elements is the ability to upload an avatar. You can add your own photo or choose a graphic that represents the appearance of your character. This adds a personal touch and helps visualize their appearance.
+The creator also allows you to export the created character to a PDF file. This makes it easy to save and share your character in a professional and readable format.
+
+Additionally, the creator provides the option to fill in essential character information. You can enter their history, personality traits, and even abilities.
+
+## Demo
+
+Insert gif or link to demo
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
