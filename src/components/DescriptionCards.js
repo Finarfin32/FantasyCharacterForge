@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../App.css";
+import "./DescriptionCards.css";
 import { RACE_DESCRIPTION, CLASS_DESCRIPTION } from "../consts/description";
 //a function that checks which card has been selected
 //by passing the 3 arguments from parent

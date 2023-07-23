@@ -14,8 +14,8 @@ function Attribute({ count, setCount, name }) {
 
   return (
     <>
-      <h1>{name}</h1>
-      <h1>{count}</h1>
+      <h1 className="atribute_name">{name}</h1>
+      <h1 className="atribute_count">{count}</h1>
       <div className="buttonsAttributes">
         <button className="button plus" onClick={IncNum}>
           +

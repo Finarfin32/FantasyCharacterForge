@@ -30,3 +30,11 @@
   .button.plus::before {
     background-image: url('../../../media/plus.png');
   }
+
+  .atribute_name{
+    color: #D2C8AE;
+  }
+
+  .atribute_count{
+    color: #D2C8AE;
+  }

@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "./Buttons.css";
 
 function Buttons({ setCurrentTab, isDisabled }) {
   return (
@@ -19,7 +20,7 @@ function Buttons({ setCurrentTab, isDisabled }) {
         onClick={() => {
           setCurrentTab(1); //If "Klasy" picked (onClick) setCurrentTab to 1.
         }}
-        disabled={isDisabled[1]} //Array, set to 0 this sets the function (setDisabled) to [false, false, false]
+        disabled={isDisabled[1]} //Array, set to 0 this sets the function (setDisabled) to [false, false, false, ]
       >
         Klasy postaci
       </button>
@@ -29,7 +30,7 @@ function Buttons({ setCurrentTab, isDisabled }) {
         onClick={() => {
           setCurrentTab(2); //2
         }}
-        disabled={isDisabled[2]} //[false, false, false]
+        disabled={isDisabled[2]} //[false, false, false, false]
       >
         Atrybuty postaci
       </button>
@@ -37,9 +38,9 @@ function Buttons({ setCurrentTab, isDisabled }) {
       <button
         className="btn-tab draw-border"
         onClick={() => {
-          setCurrentTab(2); //2
+          setCurrentTab(3); //3
         }}
-        disabled={isDisabled[2]} //[false, false, false]
+        disabled={isDisabled[3]} //[false, false, false, false]
       >
         Podsumowanie
       </button>

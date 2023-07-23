@@ -1,0 +1,74 @@
+.ButtonsDescription{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    height: 55px;
+  }
+
+.arrow-left{
+    width: 180px;
+    text-transform: uppercase;
+    text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+    color: #E5E0C8;
+    filter: drop-shadow(0px 0px 33px rgba(0, 0, 0, 0.66)) drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.66));
+    font-size: 16px;
+    cursor: url("../media/pointer.png"), auto;
+    background-image: url("../media/button.png");
+    margin-right: 10px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .arrow-sub{
+    width: 180px;
+    text-transform: uppercase;
+    text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+    color: #E5E0C8;
+    filter: drop-shadow(0px 0px 33px rgba(0, 0, 0, 0.66)) drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.66));
+    font-size: 16px;
+    cursor: url("../media/pointer.png"), auto;
+    background-image: url("../media/button.png");
+    margin-right: 10px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .arrow-right{
+    width: 180px;
+    text-transform: uppercase;
+    text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+    color: #E5E0C8;
+    filter: drop-shadow(0px 0px 33px rgba(0, 0, 0, 0.66)) drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.66));
+    font-size: 16px;
+    cursor: url("../media/pointer.png"), auto;
+    background-image: url("../media/button.png");
+    margin-right: 10px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .description{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 1.5rem;
+    text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+    color: #D2C8AE;
+  }
+
+  .Buttons2 {
+    color:red;
+   }
+   
+   .ButtonsDescription{
+       margin-top: 2%;
+       display: flex;
+       justify-content: center;
+   }
+   
+  
+  

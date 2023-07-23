@@ -3,6 +3,7 @@ import "./shared.scss";
 import React, { useState } from "react";
 import RaceCardsState from "./components/RaceCardsState";
 import ClassCardsState from "./components/ClassCardsState";
+import Summary from "./components/Summary";
 import AttributesPage from "./components/AttributesPage/AttributesPage.js";
 import Description from "./components/DescriptionCards";
 import Buttons from "./components/Buttons";
@@ -11,18 +12,20 @@ function App() {
   const [pickedRaceCard, setPickedRaceCard] = useState("Not selected");
   const [pickedClassCard, setPickedClassCard] = useState("Not selected");
   const [currentTab, setCurrentTab] = useState(0);
-  const [isDisabled, setDisabled] = useState([false, true, true]);
+  const [isDisabled, setDisabled] = useState([false, true, true, true]);
   const [activeCard, setActiveCard] = useState(0);
 
   //Function locks the buttons if (currentTab && pickedRaceCard) - true
   //Function change array setDisabled
   const handleSubmit = () => {
     if (currentTab === 0 && pickedRaceCard === "Not selected") {
-      setDisabled([false, false, true]);
+      setDisabled([false, false, true, true]);
     } else if (currentTab === 1 && pickedClassCard === "Not selected") {
-      setDisabled([false, false, false]);
+      setDisabled([false, false, false, false]);
+    } else if (currentTab === 2 && pickedClassCard === "Not selected") {
+      setDisabled([false, false, false, false]);
     } else {
-      setDisabled([false, false, false]);
+      setDisabled([false, false, false, false]);
     }
     setCurrentTab(currentTab + 1);
   };
@@ -41,6 +44,7 @@ function App() {
           pickedClassCard={pickedClassCard}
         />
       )}
+      {currentTab === 3 && <Summary />}
       <div className="Buttons2">
         {currentTab !== 2 && (
           <Description
