@@ -14,6 +14,7 @@ function App() {
   const [currentTab, setCurrentTab] = useState(0);
   const [isDisabled, setDisabled] = useState([false, true, true, true]);
   const [activeCard, setActiveCard] = useState(0);
+  const [formData, setFormData] = useState();
 
   //Function locks the buttons if (currentTab && pickedRaceCard) - true
   //Function change array setDisabled
@@ -21,14 +22,20 @@ function App() {
     if (currentTab === 0 && pickedRaceCard === "Not selected") {
       setDisabled([false, false, true, true]);
     } else if (currentTab === 1 && pickedClassCard === "Not selected") {
-      setDisabled([false, false, false, false]);
+      setDisabled([false, false, false, true]);
     } else if (currentTab === 2 && pickedClassCard === "Not selected") {
-      setDisabled([false, false, false, false]);
+      setDisabled([false, false, false, true]);
     } else {
       setDisabled([false, false, false, false]);
     }
     setCurrentTab(currentTab + 1);
   };
+
+  const handleAttributesFormSubmit = (data) => {
+    setFormData(data);
+    handleSubmit();
+  };
+
   return (
     <div className="app">
       <Buttons setCurrentTab={setCurrentTab} isDisabled={isDisabled}></Buttons>{" "}
@@ -37,16 +44,17 @@ function App() {
       {currentTab === 0 && <RaceCardsState activeCard={activeCard} />}
       {/*if current tab 1 show ClassCardState with 3 properties */}
       {currentTab === 1 && <ClassCardsState activeCard={activeCard} />}
-      {/*if current tab 2 show AttributesPage with div Test and Description */}
+      {/*if current tab 2 show AttributFesPage with div Test and Description */}
       {currentTab === 2 && (
         <AttributesPage
           pickedRaceCard={pickedRaceCard}
           pickedClassCard={pickedClassCard}
+          handleSubmitAttributes={handleAttributesFormSubmit}
         />
       )}
-      {currentTab === 3 && <Summary />}
+      {currentTab === 3 && <Summary formData={formData} />}
       <div className="Buttons2">
-        {currentTab !== 2 && (
+        {currentTab < 2 && (
           <Description
             pickedRaceCard={pickedRaceCard}
             pickedClassCard={pickedClassCard}

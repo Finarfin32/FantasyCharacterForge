@@ -1,10 +1,10 @@
 import React from "react";
 
-function Summary() {
+function Summary({ formData }) {
   return (
     <div>
-      <h1>Test</h1>
-      <p>Test2</p>
+      <h1>{formData["character_name"]}</h1>
+      <p>{formData["dynasty"]}</p>
     </div>
   );
 }

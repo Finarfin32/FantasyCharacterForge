@@ -14,25 +14,32 @@ import RangeForm from "./Forms/RangeForm";
 import FamilyForm from "./Forms/FamilyForm";
 import SkillsForm from "./Forms/SkillsForm";
 
-function AttributesPage({ pickedRaceCard, pickedClassCard }) {
+function AttributesPage({
+  pickedRaceCard,
+  pickedClassCard,
+  handleSubmitAttributes,
+}) {
   const methods = useForm();
   const { handleSubmit } = methods;
-  const onSubmit = (data, avatar) => {
-    data["skills"] = {
-      strenght: count1,
-      dexterity: count2,
-      intelligence: count3,
-    };
-    avatar = image;
-    console.log(data);
-  };
 
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
 
-  const [image] = useState("");
+  // const [image] = useState("");
   const [selectedImage, setSelectedImage] = useState();
+
+  const onSubmit = (data) => {
+    data["skills"] = {
+      strenght: count1,
+      dexterity: count2,
+      intelligence: count3,
+    };
+    data["avatar"] = selectedImage;
+    // console.log(data);
+    handleSubmitAttributes(data);
+  };
+
   const handleImageSave = (image) => {
     setSelectedImage(image);
   };
@@ -53,7 +60,7 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
           <RealmForm />
         </div>
         <div className="mid_attributes_grid">
-          <AvatarForm setImage={() => {}} onImageSave={handleImageSave} />
+          <AvatarForm image={selectedImage} onImageSave={handleImageSave} />
           <SkillsForm
             count1={count1}
             count2={count2}
@@ -66,10 +73,6 @@ function AttributesPage({ pickedRaceCard, pickedClassCard }) {
 
         <div className="right_attributes_grid">
           <RangeForm />
-          <div className="attributes_col_traits">
-            <h1>Umiejętności</h1>
-            <PopupForm onSubmit={onSubmit}></PopupForm>
-          </div>
         </div>
 
         <div
