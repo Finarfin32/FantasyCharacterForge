@@ -10,7 +10,6 @@
     "@testing-library/user-event": "^13.5.0",
     "react-hook-form": "^7.32.0",
     "react-scripts": "5.0.1",
-    "reactjs-popup": "^2.0.5",
     "sass": "^1.52.1",
     "web-vitals": "^2.1.4"
   },

@@ -3,7 +3,7 @@ import "../../App.css";
 import "./AttributesPage.css";
 import { useForm, FormProvider } from "react-hook-form";
 import CultureForm from "./Forms/CultureForm";
-import PopupForm from "./Forms/PopupForm";
+import Biography from "./Forms/TextArea";
 import DynastyForm from "./Forms/DynastyForm";
 import SexForm from "./Forms/SexForm";
 import FaithForm from "./Forms/FaithForm";
@@ -73,6 +73,7 @@ function AttributesPage({
 
         <div className="right_attributes_grid">
           <RangeForm />
+          <Biography />
         </div>
 
         <div
