@@ -85,7 +85,11 @@ function AttributesPage({
           }}
         >
           <form onSubmit={handleSubmit(onSubmit)}>
-            <input type="submit" />
+            <input
+              className="input_Attributes_Page"
+              type="submit"
+              value="Prześlij formularz"
+            />
           </form>
         </div>
       </div>

@@ -20,7 +20,7 @@ function RaceCardsState({ activeCard }) {
       <div className="Cards-box">
         <div className="Human">
           <Card
-            name="Human"
+            name="Człowiek"
             src={Human}
             isActive={activeCard === 0 ? true : false}
           />
@@ -34,7 +34,7 @@ function RaceCardsState({ activeCard }) {
         </div>
         <div className="Dwarf">
           <Card
-            name="Dwarf"
+            name="Krasnolud"
             src={Dwarf}
             isActive={activeCard === 2 ? true : false}
           />

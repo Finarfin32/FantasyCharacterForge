@@ -26,9 +26,9 @@
   font-size: 18px;
   cursor: url("../../../media/pointer.png"), auto;
   background-image: url("../../../media/button.png");
-  margin-right: 10px; 
   background-repeat: no-repeat;
   background-size: cover;
+  transform: scale(0.9);
 }
 
 

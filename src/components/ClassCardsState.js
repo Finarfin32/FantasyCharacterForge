@@ -20,28 +20,28 @@ function ClassCardsState({ activeCard }) {
       <div className="Cards-box">
         <div className="Warrior">
           <Card
-            name="Warrior"
+            name="Wojownik"
             src={Warrior}
             isActive={activeCard === 0 ? true : false}
           />
         </div>
         <div className="Hunter">
           <Card
-            name="Hunter"
+            name="Łowca"
             src={Hunter}
             isActive={activeCard === 1 ? true : false}
           />
         </div>
         <div className="Mage">
           <Card
-            name="Mage"
+            name="Mag"
             src={Mage}
             isActive={activeCard === 2 ? true : false}
           />
         </div>
         <div className="Priest">
           <Card
-            name="Priest"
+            name="Kapłan"
             src={Priest}
             isActive={activeCard === 3 ? true : false}
           />

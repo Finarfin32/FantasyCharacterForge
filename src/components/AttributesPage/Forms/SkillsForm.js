@@ -12,17 +12,15 @@ function SkillsForm({
 }) {
   return (
     <div className="attributes_col_skills">
-      <ul>
-        <div className="strenght">
-          <Attribute name="SIŁA" setCount={setCount1} count={count1} />
-        </div>
-        <div className="dexterity">
-          <Attribute name="ZRĘCZNOŚĆ" setCount={setCount2} count={count2} />
-        </div>
-        <div className="intelligence">
-          <Attribute name="INTELIGENCJA" setCount={setCount3} count={count3} />
-        </div>
-      </ul>
+      <div className="strenght">
+        <Attribute name="SIŁA" setCount={setCount1} count={count1} />
+      </div>
+      <div className="dexterity">
+        <Attribute name="ZRĘCZNOŚĆ" setCount={setCount2} count={count2} />
+      </div>
+      <div className="intelligence">
+        <Attribute name="INTELIGENCJA" setCount={setCount3} count={count3} />
+      </div>
     </div>
   );
 }

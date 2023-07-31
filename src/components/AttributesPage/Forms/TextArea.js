@@ -1,24 +1,25 @@
 import React from "react";
-import "../../../App.css";
-import "../AttributesPage.css";
 import { useFormContext } from "react-hook-form";
+import "./TextArea.css";
 
 function Biography({ onSubmit }) {
   const { register, handleSubmit } = useFormContext();
+
   return (
     <div className="attributes_col_biography">
       <h1>Biografia</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input
-          className="css-input"
-          type="text"
+      <form className="biography_form" onSubmit={handleSubmit(onSubmit)}>
+        <textarea
+          className="biography_input"
           placeholder="Biografia"
           {...register("Biography", {
-            maxLength: 200,
+            maxLength: 300,
           })}
+          style={{ minHeight: "50px", maxHeight: "200px" }}
         />
       </form>
     </div>
   );
 }
+
 export default Biography;

@@ -5,21 +5,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  transform: scale(0.8); 
+
+  @media (max-width: 768px) {
+    flex-direction: column; 
+    transform: scale(0.7); 
+  }
 }
 
-.strenght {
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.dexterity {
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-}
+.strenght,
+.dexterity,
 .intelligence {
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  
+  flex: 1;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }

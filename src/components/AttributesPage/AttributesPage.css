@@ -111,7 +111,7 @@
 
 .Footer {
   width: 100%;
-  /* height: 5%; */
+  height: 5px;
   color: rgb(0, 0, 0);
   clear: both;
 }
@@ -326,4 +326,21 @@ h1 {
   font-style: normal;
   font-variant: normal;
   text-transform: none;
+}
+
+
+.input_Attributes_Page{
+  background-color: black;
+  color: #D2C8AE;
+  border: solid #807c3f;
+  padding: 5px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.input_Attributes_Page:hover {
+  background-color: #807c3f;
 }

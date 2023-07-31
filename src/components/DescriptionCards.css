@@ -55,7 +55,7 @@
     text-align: center;
     margin-left: 20%;
     margin-right: 20%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
     color: #D2C8AE;
   }
@@ -65,9 +65,10 @@
    }
    
    .ButtonsDescription{
-       margin-top: 2%;
+       margin-top: 1%;
        display: flex;
        justify-content: center;
+       transform: scale(0.8);
    }
    
   
