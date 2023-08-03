@@ -11,12 +11,16 @@ function CharacterNameForm({ onSubmit }) {
   console.log(errors);
   return (
     <div className="attributes_col_character_name">
-      <h1>Nazwa Postaci</h1>
+      <label
+        for="character_name"
+        className="block mb-2 text-lg font-medium text-orange-200 dark:text-white font-medium"
+      >
+        Nazwa postaci
+      </label>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="css-input"
+          className="bg-neutral-900 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           type="text"
-          placeholder="Nazwa Postaci"
           {...register("character_name", {
             required: "To pole jest wymagane",
             maxLength: 45,

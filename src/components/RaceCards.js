@@ -8,7 +8,7 @@ function Card({ name, src, isActive }) {
         <img src={src} alt={name} />
       </div>
       <div className="cards-name">
-        <h3>{name}</h3>
+        <h2>{name}</h2>
       </div>
     </>
   );
