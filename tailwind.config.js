@@ -4,6 +4,10 @@ export const content = [
   "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
 ];
 export const theme = {
-  extend: {},
+  extend: {
+    colors: {
+      goldd: "#D2C8AE",
+    },
+  },
 };
 export const plugins = [require("flowbite/plugin")];

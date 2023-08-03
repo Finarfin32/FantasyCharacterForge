@@ -1,8 +1,8 @@
 .biography_form {
-  width: 300px;
+  width: 400px;
 }
 
-
+/* 
 .biography_input {
   width: 100%;
   padding: 6px;
@@ -14,4 +14,4 @@
   border-style: solid;
   border-radius: 2px;
   resize: vertical;
-}
+} */

@@ -7,23 +7,39 @@ function SexForm() {
   const { register } = useFormContext();
   return (
     <div className="attributes_col_sex">
-      <label htmlFor="male">
-        <h1>Płeć</h1>
+      <div className="flex items-center mb-4">
         <input
           {...register("sex", { required: true })}
+          id="default-radio-1"
           type="radio"
           value="Mężczyzna"
+          name="default-radio"
+          className="w-4 h-4 text-goldd bg-gray-100 border-gray-300 focus:ring-amber-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
         />
-        Mężczyzna
-      </label>
-      <label htmlFor="female">
+        <label
+          for="default-radio-1"
+          className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+        >
+          Mężczyzna
+        </label>
+      </div>
+      <div class="flex items-center">
         <input
           {...register("sex", { required: true })}
+          checked
+          id="default-radio-2"
           type="radio"
           value="Kobieta"
+          name="default-radio"
+          className="w-4 h-4 text-goldd bg-gray-100 border-gray-300 focus:ring-amber-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
         />
-        Kobieta
-      </label>
+        <label
+          for="default-radio-2"
+          className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+        >
+          Kobieta
+        </label>
+      </div>
     </div>
   );
 }

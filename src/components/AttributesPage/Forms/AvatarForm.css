@@ -34,4 +34,8 @@
 
 .attributes_col_avatar_text{
   color: #D2C8AE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
 }

@@ -7,11 +7,18 @@ function Biography({ onSubmit }) {
 
   return (
     <div className="attributes_col_biography">
-      <h1>Biografia</h1>
+      <label
+        for="message"
+        className="block mb-2 text-base font-medium text-goldd"
+      >
+        Twoja Biografia
+      </label>
       <form className="biography_form" onSubmit={handleSubmit(onSubmit)}>
         <textarea
-          className="biography_input"
-          placeholder="Biografia"
+          id="message"
+          rows="4"
+          className="block p-2.5 w-full text-sm text-goldd bg-neutral-900 rounded-lg border-goldd border-text-goldd focus:ring-amber-500 focus:border-amber-500"
+          placeholder="Napisz swoją biografię..."
           {...register("Biography", {
             maxLength: 300,
           })}

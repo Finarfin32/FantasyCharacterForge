@@ -48,18 +48,9 @@ function AttributesPage({
 
   return (
     <FormProvider {...methods}>
-      <div className="container_attributes">
-        <div className="TopBar"></div>
-        <div className="left_attributes_grid">
-          <SexForm />
-          <CharacterNameForm onSubmit={onSubmit} />
-          <DynastyForm onSubmit={onSubmit} />
-          <FamilyForm onSubmit={onSubmit} />
-          <FaithForm />
-          <CultureForm onSubmit={onSubmit} />
-          <RealmForm />
-        </div>
-        <div className="mid_attributes_grid">
+      <div className="TopBar"></div>
+      <div class="grid grid-rows-3 grid-flow-col gap-4">
+        <div class="row-span-3 ...">
           <AvatarForm image={selectedImage} onImageSave={handleImageSave} />
           <SkillsForm
             count1={count1}
@@ -70,20 +61,20 @@ function AttributesPage({
             setCount3={setCount3}
           />
         </div>
-
-        <div className="right_attributes_grid">
-          <RangeForm />
-          <Biography />
+        <div class="col-span-2 ...">
+          <SexForm />
+          <CharacterNameForm onSubmit={onSubmit} />
+          <DynastyForm onSubmit={onSubmit} />
+          <FamilyForm onSubmit={onSubmit} />
         </div>
-
-        <div
-          className="Footer"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div class="row-span-2 col-span-1 ...">
+          <FaithForm />
+          <CultureForm onSubmit={onSubmit} />
+          <RealmForm />
+          <RangeForm />
+        </div>
+        <div class="row-span-2 col-span-1 ...">
+          <Biography />
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               className="input_Attributes_Page"
@@ -91,12 +82,18 @@ function AttributesPage({
               value="Prześlij formularz"
             />
           </form>
+          <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
+          <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
         </div>
       </div>
-      <div className="Test">
-        <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
-        <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
-      </div>
+      {/* <div
+        className="Footer"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      ></div> */}
     </FormProvider>
   );
 }

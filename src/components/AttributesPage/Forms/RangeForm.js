@@ -8,41 +8,40 @@ function RangeForm() {
   return (
     <>
       <div className="attributes_col_age">
-        <h1>Wiek: {watch("age") ? watch("age") : "12"}</h1>
-        <span>
-          <i className="arrow left"></i>
-        </span>
+        <label
+          for="default-range"
+          className="block mb-2 text-sm font-medium text-goldd"
+        >
+          Wiek {watch("age") ? watch("age") : "12"}
+        </label>
         <input
-          className="istyle"
+          id="default-range"
+          type="range"
+          className="w-72 h-2 bg-goldd rounded-lg appearance-none cursor-pointer"
           min="12"
           max="85"
-          type="range"
           placeholder="age"
           defaultValue="12"
           {...register("age", {})}
         />
-        <span>
-          <i className="arrow right"></i>
-        </span>
       </div>
       <div className="attributes_col_weight">
-        <h1>Waga: {watch("weight") ? watch("weight") : "20"}</h1>
-
-        <span>
-          <i className="arrow left"></i>
-        </span>
+        <label
+          for="default-range"
+          class="block mb-2 text-sm font-medium text-goldd"
+        >
+          Waga: {watch("weight") ? watch("weight") : "20"}
+        </label>
         <input
-          className="istyle"
+          id="default-range"
+          type="range"
+          className="w-72 h-2 bg-goldd rounded-lg appearance-none cursor-pointer"
           min="20"
           max="120"
-          type="range"
           placeholder="weight"
           defaultValue="20"
           {...register("weight", {})}
         />
-        <span>
-          <i className="arrow right"></i>
-        </span>
       </div>
     </>
   );

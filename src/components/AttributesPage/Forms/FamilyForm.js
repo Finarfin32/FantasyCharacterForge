@@ -11,10 +11,15 @@ function FamilyForm({ onSubmit }) {
   } = useFormContext();
   return (
     <div className="attributes_col_family">
-      <h1>Rodzina</h1>
+      <label
+        for="family"
+        className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+      >
+        Rodzina
+      </label>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="css-input"
+          className="bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5"
           type="text"
           placeholder="Rodzina"
           {...register("family", {

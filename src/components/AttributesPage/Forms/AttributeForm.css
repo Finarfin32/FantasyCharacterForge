@@ -33,8 +33,20 @@
 
   .atribute_name{
     color: #D2C8AE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .atribute_count{
     color: #D2C8AE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttonsAttributes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
