@@ -7,14 +7,11 @@ function FaithForm() {
   const { register } = useFormContext();
   return (
     <div className="attributes_col_faith">
-      <label
-        for="faith"
-        className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
-      >
+      <label for="faith" className="block mb-2 text-lg font-medium text-goldd">
         Wybierz wiarę postaci
       </label>
       <select
-        className="bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5"
+        className="bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"
         {...register("faith", { required: true })}
       >
         <option value="Wiara1">Wiara1</option>

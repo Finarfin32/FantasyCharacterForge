@@ -12,7 +12,7 @@ function RealmForm() {
         Wybierz królestwo skąd pochodzi twoja postać
       </label>
       <select
-        className="bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5"
+        className="bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"
         {...register("realm", { required: true })}
       >
         <option value="Królestwo1">Królestwo1</option>

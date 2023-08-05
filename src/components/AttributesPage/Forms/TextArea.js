@@ -17,7 +17,7 @@ function Biography({ onSubmit }) {
         <textarea
           id="message"
           rows="4"
-          className="block p-2.5 w-full text-sm text-goldd bg-neutral-900 rounded-lg border-goldd border-text-goldd focus:ring-amber-500 focus:border-amber-500"
+          className="block p-2.5 w-full text-sm text-goldd bg-neutral-900 rounded-lg border-goldd border-text-goldd focus:ring-amber-500 focus:border-amber-500 hover:border-amber-500"
           placeholder="Napisz swoją biografię..."
           {...register("Biography", {
             maxLength: 300,

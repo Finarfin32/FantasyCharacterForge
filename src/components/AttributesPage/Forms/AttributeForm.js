@@ -17,10 +17,13 @@ function Attribute({ count, setCount, name }) {
       <h1 className="atribute_name">{name}</h1>
       <h1 className="atribute_count">{count}</h1>
       <div className="buttonsAttributes">
-        <button className="button plus" onClick={IncNum}>
+        <button className="button plus hover:border-amber-500" onClick={IncNum}>
           +
         </button>
-        <button className="button minus" onClick={DecNum}>
+        <button
+          className="button minus hover:border-amber-500"
+          onClick={DecNum}
+        >
           -
         </button>
       </div>

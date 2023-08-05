@@ -14,7 +14,7 @@ function SexForm() {
           type="radio"
           value="Mężczyzna"
           name="default-radio"
-          className="w-4 h-4 text-goldd bg-gray-100 border-gray-300 focus:ring-amber-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          className="w-4 h-4 text-goldd bg-gray-100 border-gray-300 focus:ring-amber-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 hover:border-amber-500"
         />
         <label
           for="default-radio-1"
@@ -31,7 +31,7 @@ function SexForm() {
           type="radio"
           value="Kobieta"
           name="default-radio"
-          className="w-4 h-4 text-goldd bg-gray-100 border-gray-300 focus:ring-amber-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          className="w-4 h-4 text-goldd bg-gray-100 border-gray-300 focus:ring-amber-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 hover:border-amber-500"
         />
         <label
           for="default-radio-2"
