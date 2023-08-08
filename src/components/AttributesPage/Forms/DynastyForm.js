@@ -19,7 +19,7 @@ function DynastyForm({ onSubmit }) {
       </label>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"
+          className="bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-56 p-2.5 hover:border-amber-500"
           type="text"
           placeholder="Dynastia"
           {...register("dynasty", {

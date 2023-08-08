@@ -26,7 +26,6 @@ function AttributesPage({
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
 
-  // const [image] = useState("");
   const [selectedImage, setSelectedImage] = useState();
 
   const onSubmit = (data) => {
@@ -49,8 +48,8 @@ function AttributesPage({
   return (
     <FormProvider {...methods}>
       <div className="TopBar"></div>
-      <div class="grid grid-rows-3 grid-flow-col gap-4">
-        <div class="row-span-3 ...">
+      <div className="grid grid-rows-3 grid-flow-col gap-4 grid grid-rows-[1fr] grid-cols-[1fr] h-screen p-4">
+        <div className="row-span-3">
           <AvatarForm image={selectedImage} onImageSave={handleImageSave} />
           <SkillsForm
             count1={count1}
@@ -61,19 +60,19 @@ function AttributesPage({
             setCount3={setCount3}
           />
         </div>
-        <div class="col-span-2 ...">
+        <div className="col-span-2 h-[250px]">
           <SexForm />
           <CharacterNameForm onSubmit={onSubmit} />
           <DynastyForm onSubmit={onSubmit} />
           <FamilyForm onSubmit={onSubmit} />
         </div>
-        <div class="row-span-2 col-span-1 ...">
+        <div className="row-span-2 col-span-1">
           <FaithForm />
           <CultureForm onSubmit={onSubmit} />
           <RealmForm />
           <RangeForm />
         </div>
-        <div class="row-span-2 col-span-1 ...">
+        <div className="row-span-2 col-span-1">
           <Biography />
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
@@ -86,14 +85,6 @@ function AttributesPage({
           <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
         </div>
       </div>
-      {/* <div
-        className="Footer"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      ></div> */}
     </FormProvider>
   );
 }

@@ -10,6 +10,7 @@
   width: 100%;
   height: 5%;
   color: rgb(250, 250, 250);
+  position: fixed;
 }
 
 /*------------------LEFT--------------------*/
@@ -80,7 +81,7 @@
 .attributes_col_sex {
   display: inline-block;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 8%;
 }
 
 .attributes_col_character_name {
@@ -368,15 +369,21 @@ h1 {
   background-color: #807c3f;
 }
 
-.gap-4 {
-  gap: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin-top: 9px;
-  width: 100%;
-  height: 100%;
-}
 
 .col-span-2 {
   grid-column: span 2 / span 2;
-  margin-top: 5px;
+  /* margin-top: 5px; */
+}
+
+.row-span-3 {
+  grid-row: span 3 / span 3;
+  /* border-right: 2px solid black; */
+}
+
+.gap-4 {
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* margin-top: 9px; */
+  /* width: 100%;
+  height: 100%; */
 }

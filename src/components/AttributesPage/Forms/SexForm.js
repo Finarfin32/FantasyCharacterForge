@@ -23,7 +23,7 @@ function SexForm() {
           Mężczyzna
         </label>
       </div>
-      <div class="flex items-center">
+      <div className="flex items-center">
         <input
           {...register("sex", { required: true })}
           checked
