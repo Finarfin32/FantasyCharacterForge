@@ -7,6 +7,7 @@
   align-items: center;
   flex-direction: row;
   transform: scale(0.8); 
+  
 
   @media (max-width: 768px) {
     flex-direction: column; 
@@ -14,11 +15,26 @@
   }
 }
 
-.strenght,
-.dexterity,
-.intelligence {
+.stats {
   flex: 1;
   margin: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
+}
+
+.bonus_stats{
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7c0000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
 }

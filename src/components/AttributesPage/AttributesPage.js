@@ -13,6 +13,7 @@ import AvatarForm from "./Forms/AvatarForm";
 import RangeForm from "./Forms/RangeForm";
 import FamilyForm from "./Forms/FamilyForm";
 import SkillsForm from "./Forms/SkillsForm";
+import ProgressSkills from "./Forms/ProgressSkills";
 
 function AttributesPage({
   pickedRaceCard,
@@ -50,10 +51,13 @@ function AttributesPage({
       <div className="TopBar"></div>
       <div className="grid grid-rows-2 grid-flow-col h-screen">
         <div className="row-span-2">
-          <div className="h-5/6">
+          <div className="h-4/6">
             <AvatarForm image={selectedImage} onImageSave={handleImageSave} />
           </div>
-          <div className="h-1/6">
+          <div className="h-2/6">
+            <div className="progressSkills">
+              <ProgressSkills />
+            </div>
             <SkillsForm
               count1={count1}
               count2={count2}
@@ -61,6 +65,8 @@ function AttributesPage({
               setCount1={setCount1}
               setCount2={setCount2}
               setCount3={setCount3}
+              pickedRaceCard={pickedRaceCard}
+              pickedClassCard={pickedClassCard}
             />
           </div>
         </div>
@@ -71,14 +77,14 @@ function AttributesPage({
             <DynastyForm onSubmit={onSubmit} />
             <FamilyForm onSubmit={onSubmit} />
           </div>
-          <div className="grid grid-cols-2 h-4/6">
-            <div className="w-2/6">
+          <div className="grid grid-cols-3 h-4/6">
+            <div>
               <FaithForm />
               <CultureForm onSubmit={onSubmit} />
               <RealmForm />
               <RangeForm />
             </div>
-            <div className="w-4/6">
+            <div className="col-span-2">
               <Biography />
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
