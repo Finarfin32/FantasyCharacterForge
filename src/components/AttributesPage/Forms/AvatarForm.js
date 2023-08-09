@@ -27,7 +27,12 @@ function AvatarForm({ image, onImageSave }) {
 
   return (
     <div className="attributes_col_avatar">
-      <h1 className="attributes_col_avatar_text">Wyświetlanie awatara</h1>
+      <label
+        for="Avatar"
+        className="attributes_col_avatar_text block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+      >
+        Wyświetlanie awatara
+      </label>
       <div className={styles.container} id="ImageTest">
         <form onSubmit={handleSubmit}>
           {preview && (

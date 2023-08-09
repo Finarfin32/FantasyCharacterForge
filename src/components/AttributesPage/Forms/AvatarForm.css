@@ -20,23 +20,15 @@
 
 .avatarButtons{
   text-transform: uppercase;
-  /* text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
-  color: #E5E0C8;
-  filter: drop-shadow(0px 0px 33px rgba(0, 0, 0, 0.66)) drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.66));
-  font-size: 18px; */
   cursor: url("../../../media/pointer.png"), auto;
-  /* background-image: url("../../../media/button.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  transform: scale(0.9); */
   margin-right: 10px;
 }
 
 
 .attributes_col_avatar_text{
-  /* color: #D2C8AE; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8%;
+  /* margin-top: 10%; */
+  padding-top: 10%;
 }
