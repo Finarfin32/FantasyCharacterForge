@@ -2,18 +2,17 @@ import React, { useState } from "react";
 import "../../App.css";
 import "./AttributesPage.css";
 import { useForm, FormProvider } from "react-hook-form";
-import CultureForm from "./Forms/CultureForm";
+import RealmForm from "./Forms/RealmForm";
 import Biography from "./Forms/TextArea";
 import DynastyForm from "./Forms/DynastyForm";
 import SexForm from "./Forms/SexForm";
 import FaithForm from "./Forms/FaithForm";
 import CharacterNameForm from "./Forms/CharacterNameForm";
-import RealmForm from "./Forms/RealmForm";
+import TestForm from "./Forms/TestForm";
 import AvatarForm from "./Forms/AvatarForm";
 import RangeForm from "./Forms/RangeForm";
 import FamilyForm from "./Forms/FamilyForm";
 import SkillsForm from "./Forms/SkillsForm";
-import ProgressSkills from "./Forms/ProgressSkills";
 
 function AttributesPage({
   pickedRaceCard,
@@ -36,7 +35,6 @@ function AttributesPage({
       intelligence: count3,
     };
     data["avatar"] = selectedImage;
-    // console.log(data);
     handleSubmitAttributes(data);
   };
 
@@ -49,15 +47,12 @@ function AttributesPage({
   return (
     <FormProvider {...methods}>
       <div className="TopBar"></div>
-      <div className="grid grid-rows-2 grid-flow-col h-screen">
+      <div className="grid grid-rows-2 grid-flow-col h-screen backdrop-blur-sm">
         <div className="row-span-2">
           <div className="h-4/6">
             <AvatarForm image={selectedImage} onImageSave={handleImageSave} />
           </div>
           <div className="h-2/6">
-            <div className="progressSkills">
-              <ProgressSkills />
-            </div>
             <SkillsForm
               count1={count1}
               count2={count2}
@@ -79,9 +74,9 @@ function AttributesPage({
           </div>
           <div className="grid grid-cols-3 h-4/6">
             <div>
+              <RealmForm onSubmit={onSubmit} />
               <FaithForm />
-              <CultureForm onSubmit={onSubmit} />
-              <RealmForm />
+              <TestForm />
               <RangeForm />
             </div>
             <div className="col-span-2">

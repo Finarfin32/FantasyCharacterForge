@@ -1,27 +1,19 @@
 import React from "react";
 
-function ProgressSkills() {
+function ProgressSkills({ currentPoints, maxValue }) {
   const progressStyle = {
-    width: "45%",
+    width: `${(currentPoints / maxValue) * 100}%`,
   };
 
   return (
-    <>
-      <div className="flex justify-between mb-1">
-        <span className="text-base font-medium text-blue-700 dark:text-white">
-          Pasek umiejętności
-        </span>
-        <span className="text-sm font-medium text-blue-700 dark:text-white">
-          Obecne punkty
-        </span>
+    <div className="flex justify-between mb-1">
+      <span className="text-sm font-medium text-goldd">
+        Obecne punkty: {currentPoints}/{maxValue}
+      </span>
+      <div className="w-full bg-neutral-900 border border-goldd rounded-full h-3 focus:ring-amber-500 focus:border-amber-500 hover:border-amber-500">
+        <div className="bg-goldd h-3 rounded-full" style={progressStyle}></div>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div
-          className="bg-blue-600 h-2.5 rounded-full"
-          style={progressStyle}
-        ></div>
-      </div>
-    </>
+    </div>
   );
 }
 

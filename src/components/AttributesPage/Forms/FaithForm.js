@@ -14,11 +14,11 @@ function FaithForm() {
         className="bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"
         {...register("faith", { required: true })}
       >
-        <option value="Wiara1">Wiara1</option>
-        <option value="Wiara2">Wiara2</option>
-        <option value="Wiara3">Wiara3</option>
-        <option value="Wiara4">Wiara4</option>
-        <option value="Wiara5">Wiara5</option>
+        <option value="Wiara1">Aier</option>
+        <option value="Wiara2">Greeteal</option>
+        <option value="Wiara3">Tluv Seud</option>
+        <option value="Wiara4">Cassylia</option>
+        <option value="Wiara5">Orson</option>
       </select>
     </div>
   );

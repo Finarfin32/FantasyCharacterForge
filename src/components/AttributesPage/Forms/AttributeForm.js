@@ -3,12 +3,14 @@ import "./AttributeForm.css";
 
 function Attribute({ count, setCount, name }) {
   const IncNum = () => {
-    setCount(count + 1);
+    if (count < 10) {
+      setCount(count + 1);
+    }
   };
+
   const DecNum = () => {
-    if (count > 0) setCount(count - 1);
-    else {
-      setCount(0);
+    if (count > 0) {
+      setCount(count - 1);
     }
   };
 

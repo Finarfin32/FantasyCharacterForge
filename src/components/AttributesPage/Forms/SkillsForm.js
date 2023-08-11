@@ -1,4 +1,5 @@
 import React from "react";
+import ProgressSkills from "./ProgressSkills";
 import Attribute from "./AttributeForm";
 import "./SkillsForm.css";
 import { RACES } from "../../../consts/const.js";
@@ -13,42 +14,49 @@ function SkillsForm({
   pickedRaceCard,
   pickedClassCard,
 }) {
+  const strengthValue =
+    RACES[pickedRaceCard]?.strength + RACES[pickedClassCard]?.strength;
+  const dexterityValue =
+    RACES[pickedRaceCard]?.dexterity + RACES[pickedClassCard]?.dexterity;
+  const intelligenceValue =
+    RACES[pickedRaceCard]?.intelligence + RACES[pickedClassCard]?.intelligence;
+
   const attributeData = [
     {
-      label: "",
-      value: RACES[pickedRaceCard]?.strength + RACES[pickedClassCard]?.strength,
+      label: "SIŁA",
       setCount: setCount1,
       count: count1,
+      value: strengthValue,
     },
     {
-      label: "",
-      value:
-        RACES[pickedRaceCard]?.dexterity + RACES[pickedClassCard]?.dexterity,
+      label: "ZRĘCZNOŚĆ",
       setCount: setCount2,
       count: count2,
+      value: dexterityValue,
     },
     {
-      label: "",
-      value:
-        RACES[pickedRaceCard]?.intelligence +
-        RACES[pickedClassCard]?.intelligence,
+      label: "INTELIGENCJA",
       setCount: setCount3,
       count: count3,
+      value: intelligenceValue,
     },
   ];
+  const limit = 10;
 
   return (
     <div className="attributes_col_skills">
       {attributeData.map((attribute) => (
         <div className="stats" key={attribute.label}>
+          <ProgressSkills currentPoints={attribute.count} maxValue={limit} />
           <Attribute
             name={attribute.label}
             setCount={attribute.setCount}
             count={attribute.count}
           />
-          <div className="bonus_stats">
-            {attribute.label} {attribute.value}
-          </div>
+          <div className="bonus_stats bg-rose-800">{attribute.value}</div>
+          <span className="text-xs font-medium text-rose-800 hover:text-goldd">
+            *Punkty przyznane za wybór klasy i rasy.
+          </span>
         </div>
       ))}
     </div>
@@ -56,45 +64,3 @@ function SkillsForm({
 }
 
 export default SkillsForm;
-
-// import React from "react";
-// import Attribute from "./AttributeForm";
-// import "./SkillsForm.css";
-// import { RACES } from "../../../consts/const.js";
-// function SkillsForm({
-//   count1,
-//   count2,
-//   count3,
-//   setCount1,
-//   setCount2,
-//   setCount3,
-//   pickedRaceCard,
-//   pickedClassCard,
-// }) {
-//   const strengthValue = RACES[pickedRaceCard]?.strength;
-//   const strengthValue2 = RACES[pickedClassCard]?.strength;
-//   const dexterityValue = RACES[pickedRaceCard]?.dexterity;
-//   const dexterityValue2 = RACES[pickedClassCard]?.dexterity;
-//   const intelligenceValue = RACES[pickedRaceCard]?.intelligence;
-//   const intelligenceValue2 = RACES[pickedClassCard]?.intelligence;
-//   const test = {
-//     color: "white",
-//   };
-//   return (
-//     <div className="attributes_col_skills">
-//       <div className="strenght">
-//         <Attribute name="SIŁA" setCount={setCount1} count={count1} />
-//         <p style={test}>SIŁA: {strengthValue + strengthValue2}</p>
-//       </div>
-//       <div className="dexterity">
-//         <Attribute name="ZRĘCZNOŚĆ" setCount={setCount2} count={count2} />
-//         <p style={test}>SIŁA: {dexterityValue + dexterityValue2}</p>
-//       </div>
-//       <div className="intelligence">
-//         <Attribute name="INTELIGENCJA" setCount={setCount3} count={count3} />
-//         <p style={test}>SIŁA: {intelligenceValue + intelligenceValue2}</p>
-//       </div>
-//     </div>
-//   );
-// }
-// export default SkillsForm;
