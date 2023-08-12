@@ -103,3 +103,28 @@ h1 {
   /* width: 100%;
   height: 100%; */
 }
+
+.attributes_col_realm{
+  padding-bottom: 15px; 
+}
+.attributes_col_motivations{
+  padding-bottom: 15px; 
+}
+.attributes_col_faith{
+  padding-bottom: 15px; 
+}
+
+.attributes_col_age{
+  padding-bottom: 15px; 
+}
+.attributes_col_weight{
+  padding-bottom: 15px; 
+}
+
+.attributes_col_biography{
+  padding-bottom: 15px; 
+}
+
+.attributes_col_equipment{
+  padding-bottom: 15px; 
+}

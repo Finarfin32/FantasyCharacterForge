@@ -1,32 +1,32 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
-import "./TextArea.css";
-
-function Biography({ onSubmit }) {
+import "./Biography.css";
+import "../AttributesPage.css";
+function Equipment({ onSubmit }) {
   const { register, handleSubmit } = useFormContext();
 
   return (
-    <div className="attributes_col_biography">
+    <div className="attributes_col_equipment">
       <label
         for="message"
         className="block mb-2 text-base font-medium text-goldd"
       >
-        Twoja Biografia
+        Twoje wyposażenie
       </label>
-      <form className="biography_form" onSubmit={handleSubmit(onSubmit)}>
+      <form className="equipment_form" onSubmit={handleSubmit(onSubmit)}>
         <textarea
           id="message"
           rows="4"
           className="block p-2.5 w-full text-sm text-goldd bg-neutral-900 rounded-lg border-goldd border-text-goldd focus:ring-amber-500 focus:border-amber-500 hover:border-amber-500"
-          placeholder="Napisz swoją biografię..."
-          {...register("Biography", {
+          placeholder="Wypisz ekwipunek swojej postaci"
+          {...register("Equipment", {
             maxLength: 300,
           })}
-          style={{ minHeight: "50px", maxHeight: "200px" }}
+          style={{ minHeight: "50px", maxHeight: "150px" }}
         />
       </form>
     </div>
   );
 }
 
-export default Biography;
+export default Equipment;
