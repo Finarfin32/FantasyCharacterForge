@@ -13,7 +13,7 @@ function Motivations() {
         Cele i motywacje twojej postaci:
       </label>
       <select
-        className="bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"
+        className="cursor-pointer bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"
         {...register("motivations", { required: true })}
       >
         <option value="Motivations1">Odnalezienie zaginionej rodziny</option>

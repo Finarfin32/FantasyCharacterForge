@@ -9,7 +9,7 @@
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    cursor: pointer;
+    cursor: url("../../../media/pointer.png"), auto;
   }
   
   .button::before {
@@ -54,4 +54,8 @@
 
   .progressSkills{
     padding: 50px;
+  }
+
+  .cursor-pointer {
+    cursor: url("../../../media/pointer.png"), auto;
   }

@@ -1,9 +1,9 @@
 import React from "react";
 import "./AttributeForm.css";
 
-function Attribute({ count, setCount, name }) {
+function Attribute({ count, setCount, name, maxValue }) {
   const IncNum = () => {
-    if (count < 10) {
+    if (count < maxValue) {
       setCount(count + 1);
     }
   };

@@ -128,3 +128,8 @@ h1 {
 .attributes_col_equipment{
   padding-bottom: 15px; 
 }
+
+.cursor-pointer {
+  cursor: url("../../media/pointer.png"), auto;
+}
+

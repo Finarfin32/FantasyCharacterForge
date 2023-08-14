@@ -42,6 +42,7 @@ function SkillsForm({
     },
   ];
   const limit = 10;
+  const globalLimit = 15;
 
   return (
     <div className="attributes_col_skills">
@@ -52,6 +53,7 @@ function SkillsForm({
             name={attribute.label}
             setCount={attribute.setCount}
             count={attribute.count}
+            maxValue={count1 + count2 + count3 >= globalLimit ? 0 : limit}
           />
           <div className="bonus_stats bg-rose-800">{attribute.value}</div>
           <span className="text-xs font-medium text-rose-800 hover:text-goldd">
