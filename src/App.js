@@ -52,7 +52,13 @@ function App() {
           handleSubmitAttributes={handleAttributesFormSubmit}
         />
       )}
-      {currentTab === 3 && <Summary formData={formData} />}
+      {currentTab === 3 && (
+        <Summary
+          formData={formData}
+          pickedRaceCard={pickedRaceCard}
+          pickedClassCard={pickedClassCard}
+        />
+      )}
       <div className="Buttons2">
         {currentTab < 2 && (
           <Description

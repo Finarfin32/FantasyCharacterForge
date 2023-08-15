@@ -43,20 +43,23 @@ function SkillsForm({
   ];
   const limit = 10;
   const globalLimit = 15;
-
+  const totalPoints = count1 + count2 + count3;
   return (
     <div className="attributes_col_skills">
       {attributeData.map((attribute) => (
         <div className="stats" key={attribute.label}>
+          <div className="totalPoints text-sm font-medium text-goldd hover:text-goldd">
+            Użyto: {totalPoints} punktów z 15 możliwych ogółem.
+          </div>
           <ProgressSkills currentPoints={attribute.count} maxValue={limit} />
           <Attribute
             name={attribute.label}
             setCount={attribute.setCount}
             count={attribute.count}
-            maxValue={count1 + count2 + count3 >= globalLimit ? 0 : limit}
+            maxValue={totalPoints >= globalLimit ? 0 : limit}
           />
-          <div className="bonus_stats bg-rose-800">{attribute.value}</div>
-          <span className="text-xs font-medium text-rose-800 hover:text-goldd">
+          <div className="bonus_stats bg-rose-800">*{attribute.value}</div>
+          <span className="text-sm font-medium text-rose-800 hover:text-goldd">
             *Punkty przyznane za wybór klasy i rasy.
           </span>
         </div>

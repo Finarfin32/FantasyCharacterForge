@@ -38,3 +38,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.totalPoints{
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
