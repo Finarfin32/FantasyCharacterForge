@@ -18,6 +18,8 @@ function Summary({ formData, pickedRaceCard, pickedClassCard }) {
             <br />
             {formData["dynasty"]}
             <br />
+            {formData["faith"]}
+            <br />
             <p style={{ color: "yellow" }}>Kliknięto Rase {pickedRaceCard}</p>
             <p style={{ color: "red" }}>Kliknięto Klase {pickedClassCard}</p>
           </div>
