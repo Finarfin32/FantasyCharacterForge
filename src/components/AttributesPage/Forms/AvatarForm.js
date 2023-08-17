@@ -27,34 +27,34 @@ function AvatarForm({ image, onImageSave }) {
 
   return (
     <div className="attributes_col_avatar">
-      <label
-        for="Avatar"
-        className="attributes_col_avatar_text block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
-      >
-        Wyświetlanie awatara
-      </label>
-      <div className="ButtonTest">
-        <button
-          className="avatarButtons px-3 py-2 text-xs font-medium text-center text-goldd border border-goldd bg-neutral-900 rounded-lg hover:bg-neutral-900 focus:ring-4 focus:outline-none focus:ring-amber-500 hover:border-amber-500"
-          type="submit"
-        >
-          Zapisz
-        </button>
-        <button
-          className="avatarButtons px-3 py-2 text-xs font-medium text-center text-goldd border border-goldd bg-neutral-900 rounded-lg hover:bg-neutral-900 focus:ring-4 focus:outline-none focus:ring-amber-500 hover:border-amber-500"
-          onClick={(event) => {
-            event.preventDefault();
-            fileInputRef.current.click();
-          }}
-        >
-          Dodaj zdjęcie
-        </button>
-      </div>
       <div className={styles.container} id="ImageTest">
         <form
           onSubmit={handleSubmit}
           className="flex flex-col items-center mt-4"
         >
+          <label
+            htmlFor="Avatar"
+            className="attributes_col_avatar_text block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+          >
+            Wyświetlanie awatara
+          </label>
+          <div className="ButtonTest">
+            <button
+              className="avatarButtons px-3 py-2 text-xs font-medium text-center text-goldd border border-goldd bg-neutral-900 rounded-lg hover:bg-neutral-900 focus:ring-4 focus:outline-none focus:ring-amber-500 hover:border-amber-500"
+              type="submit"
+            >
+              Zapisz
+            </button>
+            <button
+              className="avatarButtons px-3 py-2 text-xs font-medium text-center text-goldd border border-goldd bg-neutral-900 rounded-lg hover:bg-neutral-900 focus:ring-4 focus:outline-none focus:ring-amber-500 hover:border-amber-500"
+              onClick={(event) => {
+                event.preventDefault();
+                fileInputRef.current.click();
+              }}
+            >
+              Dodaj zdjęcie
+            </button>
+          </div>
           {preview && (
             <img
               alt="Avatar"
