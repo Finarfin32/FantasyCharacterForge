@@ -10,8 +10,8 @@ function ClassCardsState({ activeCard }) {
   return (
     <>
       <div className="header-top">
-        <h1 class="header-title">Klasa postaci</h1>
-        <p class="header-description">
+        <h1 className="header-title">Klasa postaci</h1>
+        <p className="header-description">
           Od rycerzy w lśniących zbrojach po skradających się prześladowców i
           przebiegłych czarowników, każda klasa oferuje unikalne wyzwania i
           rozgrywkę, które musisz opanować. Jakie jest twoje powołanie?

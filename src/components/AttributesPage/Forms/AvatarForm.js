@@ -2,10 +2,12 @@ import React from "react";
 import { useRef, useState, useEffect } from "react";
 import styles from "./AvatarForm.css";
 import "./AvatarForm.css";
+import "./CharacterNameForm.css";
 
 function AvatarForm({ image, onImageSave }) {
   const [preview, setPreview] = useState();
   const [selectedImage, setSelectedImage] = useState();
+  const [avatarHelperText, setAvatarHelperText] = useState("");
   const fileInputRef = useRef();
 
   useEffect(() => {
@@ -23,6 +25,7 @@ function AvatarForm({ image, onImageSave }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     onImageSave(selectedImage);
+    setAvatarHelperText("");
   };
 
   return (
@@ -55,6 +58,10 @@ function AvatarForm({ image, onImageSave }) {
               Dodaj zdjęcie
             </button>
           </div>
+          {avatarHelperText && (
+            <p className="errors_message">{avatarHelperText}</p>
+          )}
+          {!avatarHelperText && preview && <p className="message">Zapisano</p>}
           {preview && (
             <img
               alt="Avatar"
@@ -77,6 +84,7 @@ function AvatarForm({ image, onImageSave }) {
               if (file && file.type.substring(0, 5) === "image") {
                 setSelectedImage(file);
                 setPreview(URL.createObjectURL(file));
+                setAvatarHelperText("Aby potwierdzić zapisz zdjęcie");
               } else {
                 setSelectedImage(null);
                 setPreview(null);

@@ -8,7 +8,7 @@ function CharacterNameForm({ onSubmit }) {
     handleSubmit,
     formState: { errors },
   } = useFormContext();
-  console.log(errors);
+
   return (
     <div className="attributes_col_character_name">
       <label

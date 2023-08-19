@@ -7,7 +7,7 @@ function Motivations() {
   return (
     <div className="attributes_col_motivations">
       <label
-        for="test"
+        htmlFor="test"
         className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
       >
         Cele i motywacje twojej postaci:

@@ -1,8 +1,8 @@
 p.errors_message {
-    color: #bf1650;
     color: red;
     font-size: 15px;
     margin-top: 5px;
+    display: flex;
   }
   
   p.errors_message::before {
@@ -10,3 +10,7 @@ p.errors_message {
     content: "⚠ ";
   }
   
+  .message {
+    font-size: 15px;
+    margin-top: 5px;
+  }

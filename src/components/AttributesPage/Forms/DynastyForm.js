@@ -12,7 +12,7 @@ function DynastyForm({ onSubmit }) {
   return (
     <div className="attributes_col_dynasty">
       <label
-        for="dynasty"
+        htmlFor="dynasty"
         className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
       >
         Dynastia

@@ -9,7 +9,7 @@ function RealmForm({ onSubmit }) {
     <div className="attributes_col_realm">
       <form onSubmit={onSubmit}>
         <label
-          for="realm"
+          htmlFor="realm"
           className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
         >
           Wybierz królestwo skąd pochodzi twoja postać

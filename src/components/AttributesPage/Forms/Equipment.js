@@ -8,7 +8,7 @@ function Equipment({ onSubmit }) {
   return (
     <div className="attributes_col_equipment">
       <label
-        for="message"
+        htmlFor="message"
         className="block mb-2 text-base font-medium text-goldd"
       >
         Twoje wyposażenie

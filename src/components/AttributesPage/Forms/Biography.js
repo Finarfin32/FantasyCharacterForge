@@ -9,7 +9,7 @@ function Biography({ onSubmit }) {
   return (
     <div className="attributes_col_biography">
       <label
-        for="message"
+        htmlFor="message"
         className="block mb-2 text-base font-medium text-goldd"
       >
         Twoja Biografia

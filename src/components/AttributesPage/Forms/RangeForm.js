@@ -9,7 +9,7 @@ function RangeForm() {
     <>
       <div className="attributes_col_age">
         <label
-          for="default-range"
+          htmlFor="default-range"
           className="block mb-2 text-sm font-medium text-goldd"
         >
           Wiek {watch("age") ? watch("age") : "12"}
@@ -27,8 +27,8 @@ function RangeForm() {
       </div>
       <div className="attributes_col_weight">
         <label
-          for="default-range"
-          class="block mb-2 text-sm font-medium text-goldd"
+          htmlFor="default-range"
+          className="block mb-2 text-sm font-medium text-goldd"
         >
           Waga: {watch("weight") ? watch("weight") : "20"}
         </label>

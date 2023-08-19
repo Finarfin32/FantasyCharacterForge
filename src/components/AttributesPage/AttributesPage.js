@@ -43,7 +43,7 @@ function AttributesPage({
     setSelectedImage(image);
   };
 
-  console.log("Zapisano zdjęcie:", selectedImage);
+  // console.log("Photo saved:", selectedImage);
 
   return (
     <FormProvider {...methods}>
