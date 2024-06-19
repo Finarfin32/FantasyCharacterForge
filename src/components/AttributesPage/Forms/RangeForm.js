@@ -18,10 +18,10 @@ function RangeForm() {
           id="default-range"
           type="range"
           className="w-72 h-2 bg-goldd rounded-lg appearance-none cursor-pointer"
-          min="12"
+          min="18"
           max="85"
           placeholder="age"
-          defaultValue="12"
+          defaultValue="18"
           {...register("age", {})}
         />
       </div>
