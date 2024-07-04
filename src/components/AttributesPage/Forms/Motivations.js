@@ -16,11 +16,15 @@ function Motivations() {
         className="cursor-pointer bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"
         {...register("motivations", { required: true })}
       >
-        <option value="Motivations1">Odnalezienie zaginionej rodziny</option>
-        <option value="Motivations2">Zdobycie legendarnego skarbu</option>
-        <option value="Motivations3">Poszukiwanie przygód</option>
-        <option value="Motivations4">Ochrona niewinnych</option>
-        <option value="Motivations5">Służba religijna</option>
+        <option value="Odnalezienie zaginionej rodziny">
+          Odnalezienie zaginionej rodziny
+        </option>
+        <option value="Zdobycie legendarnego skarbu">
+          Zdobycie legendarnego skarbu
+        </option>
+        <option value="Poszukiwanie przygód">Poszukiwanie przygód</option>
+        <option value="Ochrona niewinnych">Ochrona niewinnych</option>
+        <option value="Służba religijna">Służba religijna</option>
       </select>
     </div>
   );
