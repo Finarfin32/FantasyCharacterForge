@@ -17,7 +17,7 @@ function Summary({ formData, pickedRaceCard, pickedClassCard }) {
 
   return (
     <div
-      className="flex justify-center items-center min-h-screen  text-lightText p-4"
+      className="flex justify-center items-center min-h-screen text-lightText p-4"
       style={{ backgroundImage: 'url("../media/background.jpg")' }}
     >
       <div className="bg-cardBackground rounded-lg shadow-lg p-6 w-full max-w-4xl">
@@ -61,6 +61,16 @@ function Summary({ formData, pickedRaceCard, pickedClassCard }) {
             <p className="mb-2">
               <span className="font-semibold text-goldAccent">Ekwipunek: </span>
               {formData["Equipment"]}
+            </p>
+            <p className="mb-2">
+              <span className="font-semibold text-goldAccent">
+                Umiejętności:{" "}
+              </span>
+              <span>Siła: {formData["skills"]?.strength || 0}</span>
+              <br />
+              <span>Zręczność: {formData["skills"]?.dexterity || 0}</span>
+              <br />
+              <span>Inteligencja: {formData["skills"]?.intelligence || 0}</span>
             </p>
           </div>
           <div className="flex flex-col items-center">
