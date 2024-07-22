@@ -14,23 +14,34 @@ function App() {
   const [currentTab, setCurrentTab] = useState(0);
   const [isDisabled, setDisabled] = useState([false, true, true, true]);
   const [activeCard, setActiveCard] = useState(0);
-  const [formData, setFormData] = useState();
+  const [formData, setFormData] = useState(null);
 
-  //Function locks the buttons if (currentTab && pickedRaceCard) - true
-  //Function change array setDisabled
+  /**
+   * Funkcja obsługująca zmianę tabów oraz blokowanie przycisków.
+   * Ustawia stan `isDisabled` w zależności od aktualnie wybranego tab'a i kart.
+   */
   const handleSubmit = () => {
+    let newDisabledState;
+
     if (currentTab === 0 && pickedRaceCard === "Not selected") {
-      setDisabled([false, false, true, true]);
+      newDisabledState = [false, false, true, true];
     } else if (currentTab === 1 && pickedClassCard === "Not selected") {
-      setDisabled([false, false, false, true]);
+      newDisabledState = [false, false, false, true];
     } else if (currentTab === 2 && pickedClassCard === "Not selected") {
-      setDisabled([false, false, false, true]);
+      newDisabledState = [false, false, false, true];
     } else {
-      setDisabled([false, false, false, false]);
+      newDisabledState = [false, false, false, false];
     }
-    setCurrentTab(currentTab + 1);
+
+    setDisabled(newDisabledState);
+    setCurrentTab((prevTab) => prevTab + 1);
   };
 
+  /**
+   * Funkcja obsługująca przesyłanie danych z formularza atrybutów.
+   * Ustawia dane formularza oraz przesuwa do następnego tab'a.
+   * @param {Object} data - Dane przesłane z formularza.
+   */
   const handleAttributesFormSubmit = (data) => {
     setFormData(data);
     handleSubmit();
@@ -38,13 +49,10 @@ function App() {
 
   return (
     <div className="app">
-      <Buttons setCurrentTab={setCurrentTab} isDisabled={isDisabled}></Buttons>{" "}
-      {/* Component / shows Buttons / set their state */}
-      {/*if current tab 0 show RaceCardState with 3 properties */}
+      <Buttons setCurrentTab={setCurrentTab} isDisabled={isDisabled} />
+
       {currentTab === 0 && <RaceCardsState activeCard={activeCard} />}
-      {/*if current tab 1 show ClassCardState with 3 properties */}
       {currentTab === 1 && <ClassCardsState activeCard={activeCard} />}
-      {/*if current tab 2 show AttributFesPage with div Test and Description */}
       {currentTab === 2 && (
         <AttributesPage
           pickedRaceCard={pickedRaceCard}
@@ -59,8 +67,9 @@ function App() {
           pickedClassCard={pickedClassCard}
         />
       )}
-      <div className="Buttons2">
-        {currentTab < 2 && (
+
+      {currentTab < 2 && (
+        <div className="Buttons2">
           <Description
             pickedRaceCard={pickedRaceCard}
             pickedClassCard={pickedClassCard}
@@ -70,9 +79,9 @@ function App() {
             setPickedRaceCard={setPickedRaceCard}
             setPickedClassCard={setPickedClassCard}
             handleSubmit={handleSubmit}
-          ></Description>
-        )}
-      </div>
+          />
+        </div>
+      )}
     </div>
   );
 }

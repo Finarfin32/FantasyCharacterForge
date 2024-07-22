@@ -26,6 +26,7 @@ function AttributesPage({
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
+
   const [selectedImage, setSelectedImage] = useState();
 
   const onSubmit = (data) => {
@@ -41,6 +42,8 @@ function AttributesPage({
   const handleImageSave = (image) => {
     setSelectedImage(image);
   };
+
+  // console.log("Photo saved:", selectedImage);
 
   return (
     <FormProvider {...methods}>

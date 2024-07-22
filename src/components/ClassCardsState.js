@@ -6,6 +6,12 @@ import Hunter from "../media/Hunter.jpg";
 import Mage from "../media/Mage.jpg";
 import Priest from "../media/Priest.jpg";
 
+/**
+ * Komponent wyświetlający karty klas postaci w grze.
+ * @param {Object} props
+ * @param {number} props.activeCard - Indeks aktywnej karty.
+ * @returns {JSX.Element} Wyświetla karty klas postaci.
+ */
 function ClassCardsState({ activeCard }) {
   return (
     <>
@@ -19,32 +25,16 @@ function ClassCardsState({ activeCard }) {
       </div>
       <div className="Cards-box">
         <div className="Warrior">
-          <Card
-            name="Wojownik"
-            src={Warrior}
-            isActive={activeCard === 0 ? true : false}
-          />
+          <Card name="Wojownik" src={Warrior} isActive={activeCard === 0} />
         </div>
         <div className="Hunter">
-          <Card
-            name="Łowca"
-            src={Hunter}
-            isActive={activeCard === 1 ? true : false}
-          />
+          <Card name="Łowca" src={Hunter} isActive={activeCard === 1} />
         </div>
         <div className="Mage">
-          <Card
-            name="Mag"
-            src={Mage}
-            isActive={activeCard === 2 ? true : false}
-          />
+          <Card name="Mag" src={Mage} isActive={activeCard === 2} />
         </div>
         <div className="Priest">
-          <Card
-            name="Kapłan"
-            src={Priest}
-            isActive={activeCard === 3 ? true : false}
-          />
+          <Card name="Kapłan" src={Priest} isActive={activeCard === 3} />
         </div>
       </div>
     </>

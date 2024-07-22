@@ -4,6 +4,14 @@ export class Race {
     this.dexterity = dexterity;
     this.intelligence = intelligence;
   }
+
+  /**
+   * Zwraca opis rasy jako string. Opis obiektu, który zawiera wartości jego właściwości (strength, dexterity, intelligence), w formie czytelnego tekstu.
+   * @returns {string} Opis rasy.
+   */
+  getDescription() {
+    return `Siła: ${this.strength}, Zręczność: ${this.dexterity}, Inteligencja: ${this.intelligence}`;
+  }
 }
 
 export class Playable_class {
@@ -11,5 +19,13 @@ export class Playable_class {
     this.strength = strength;
     this.dexterity = dexterity;
     this.intelligence = intelligence;
+  }
+
+  /**
+   * Zwraca opis klasy jako string.
+   * @returns {string} Opis klasy.
+   */
+  getDescription() {
+    return `Siła: ${this.strength}, Zręczność: ${this.dexterity}, Inteligencja: ${this.intelligence}`;
   }
 }
