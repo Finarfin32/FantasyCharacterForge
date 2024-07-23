@@ -1,3 +1,5 @@
+import { RACES_DISPLAY } from "../consts/const.js";
+import { CLASSES_DISPLAY } from "../consts/const.js";
 import React, { useEffect, useState } from "react";
 
 function Summary({ formData, pickedRaceCard, pickedClassCard }) {
@@ -85,10 +87,10 @@ function Summary({ formData, pickedRaceCard, pickedClassCard }) {
               </div>
             )}
             <p className="text-goldAccent font-semibold">
-              Wybrana Rasa: {pickedRaceCard}
+              Wybrana Rasa: {RACES_DISPLAY[pickedRaceCard]}
             </p>
             <p className="text-redAccent font-semibold">
-              Wybrana Klasa: {pickedClassCard}
+              Wybrana Klasa: {CLASSES_DISPLAY[pickedClassCard]}
             </p>
           </div>
         </div>

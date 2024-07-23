@@ -34,3 +34,6 @@ export const CLASSES_NAMES = ["WARRIOR", "HUNTER", "MAGE", "PRIEST"];
  * @constant {Array<Race>} RACES - Tablica z obiektami ras: [RACE_HUMAN, RACE_ELF, RACE_DWARF, RACE_DEMON].
  */
 export const RACES = [RACE_HUMAN, RACE_ELF, RACE_DWARF, RACE_DEMON];
+
+export const RACES_DISPLAY = ["CZŁOWIEK", "ELF", "KRASNOLUD", "DEMON"];
+export const CLASSES_DISPLAY = ["WOJOWNIK", "ŁOWCA", "MAG", "KAPŁAN"];
