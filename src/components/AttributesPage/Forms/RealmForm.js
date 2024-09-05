@@ -12,7 +12,7 @@ function RealmForm({ onSubmit }) {
           htmlFor="realm"
           className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
         >
-          Wybierz królestwo skąd pochodzi twoja postać
+          Wybierz królestwo
         </label>
         <select
           className="cursor-pointer bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"

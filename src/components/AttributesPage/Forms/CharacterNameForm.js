@@ -19,7 +19,7 @@ function CharacterNameForm({ onSubmit }) {
       </label>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          className="cursor-pointer bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"
+          className="cursor-pointer bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-56 p-2.5 hover:border-amber-500"
           type="text"
           placeholder="Nazwa postaci"
           {...register("character_name", {
