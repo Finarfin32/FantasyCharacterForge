@@ -22,7 +22,7 @@ function Equipment({ onSubmit }) {
           {...register("Equipment", {
             maxLength: 300,
           })}
-          style={{ minHeight: "50px", maxHeight: "150px" }}
+          style={{ minHeight: "200px", maxHeight: "200px" }}
         />
       </form>
     </div>

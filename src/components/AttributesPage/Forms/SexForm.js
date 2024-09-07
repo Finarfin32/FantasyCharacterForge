@@ -18,7 +18,7 @@ function SexForm() {
         />
         <label
           htmlFor="default-radio-1"
-          className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+          className="block ml-3 text-lg font-medium text-goldd dark:text-white font-medium"
         >
           Mężczyzna
         </label>
@@ -35,7 +35,7 @@ function SexForm() {
         />
         <label
           htmlFor="default-radio-2"
-          className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+          className="block ml-3 text-lg font-medium text-goldd dark:text-white font-medium"
         >
           Kobieta
         </label>

@@ -67,18 +67,14 @@ function AttributesPage({
           <div className="forms-top">
             <SexForm />
             <CharacterNameForm onSubmit={onSubmit} />
+            <RangeForm />
             <DynastyForm onSubmit={onSubmit} />
             <FamilyForm onSubmit={onSubmit} />
-          </div>
-          <div className="forms-middle">
             <RealmForm onSubmit={onSubmit} />
-            <FaithForm />
-            <TestForm />
           </div>
           <div className="forms-bottom">
-            <RangeForm />
-          </div>
-          <div className="bio-equipment-container">
+            <FaithForm />
+            <TestForm />
             <Biography />
             <Equipment />
             <form onSubmit={handleSubmit(onSubmit)}>

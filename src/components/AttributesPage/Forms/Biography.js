@@ -23,7 +23,7 @@ function Biography({ onSubmit }) {
           {...register("Biography", {
             maxLength: 300,
           })}
-          style={{ minHeight: "50px", maxHeight: "200px" }}
+          style={{ minHeight: "200px", maxHeight: "200px" }}
         />
       </form>
     </div>

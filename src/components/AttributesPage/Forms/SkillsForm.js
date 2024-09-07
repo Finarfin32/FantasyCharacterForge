@@ -45,26 +45,27 @@ function SkillsForm({
   const globalLimit = 15;
   const totalPoints = count1 + count2 + count3;
   return (
-    <div className="attributes_col_skills">
-      {attributeData.map((attribute) => (
+      <>
+        <div className="totalPoints text-sm font-medium text-goldd hover:text-goldd">
+          Użyto: {totalPoints} punktów z 15 możliwych ogółem.
+        </div>
+  <div className="attributes_col_skills">
+    {attributeData.map((attribute) => (
         <div className="stats" key={attribute.label}>
-          <div className="totalPoints text-sm font-medium text-goldd hover:text-goldd">
-            Użyto: {totalPoints} punktów z 15 możliwych ogółem.
-          </div>
-          <ProgressSkills currentPoints={attribute.count} maxValue={limit} />
-          <Attribute
-            name={attribute.label}
-            setCount={attribute.setCount}
-            count={attribute.count}
-            maxValue={totalPoints >= globalLimit ? 0 : limit}
-          />
-          <div className="bonus_stats bg-rose-800">*{attribute.value}</div>
-          <span className="text-sm font-medium text-rose-800 hover:text-goldd">
+        <ProgressSkills currentPoints={attribute.count} maxValue={limit}/>
+              <Attribute
+                  name={attribute.label}
+                  setCount={attribute.setCount}
+                  count={attribute.count}
+                  maxValue={totalPoints >= globalLimit ? 0 : limit}
+              />
+              <div className="bonus_stats bg-rose-800">*{attribute.value}</div>
+              <span className="text-sm font-medium text-rose-800 hover:text-goldd">
             *Punkty przyznane za wybór klasy i rasy.
           </span>
-        </div>
-      ))}
-    </div>
+            </div>
+        ))}
+      </div> </>
   );
 }
 
