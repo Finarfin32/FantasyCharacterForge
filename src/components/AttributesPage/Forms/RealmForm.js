@@ -15,7 +15,7 @@ function RealmForm({ onSubmit }) {
           Wybierz królestwo
         </label>
         <select
-          className="cursor-pointer bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-72 p-2.5 hover:border-amber-500"
+          className="cursor-pointer bg-neutral-900 border border-goldd text-goldd text-base rounded-lg focus:ring-amber-500 focus:border-amber-500 hover:border-amber-500 block w-72 p-2.5 "
           {...register("Realm", { required: true })}
         >
           <option value="Państwo1">Królestwo Dorwin i Maressi</option>
