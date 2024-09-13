@@ -13,7 +13,7 @@ function CharacterNameForm({ onSubmit }) {
     <div className="attributes_col_character_name">
       <label
         for="character_name"
-        className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+        className="block mb-2 font-medium text-goldd dark:text-white font-medium"
       >
         Nazwa postaci
       </label>

@@ -7,10 +7,7 @@ function FaithForm() {
   const { register } = useFormContext();
   return (
     <div className="attributes_col_faith">
-      <label
-        htmlFor="faith"
-        className="block mb-2 text-lg font-medium text-goldd"
-      >
+      <label htmlFor="faith" className="block mb-2 font-medium text-goldd">
         Wybierz wiarę postaci
       </label>
       <select

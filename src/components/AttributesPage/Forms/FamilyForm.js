@@ -13,7 +13,7 @@ function FamilyForm({ onSubmit }) {
     <div className="attributes_col_family">
       <label
         for="family"
-        className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+        className="block mb-2 font-medium text-goldd dark:text-white font-medium"
       >
         Rodzina
       </label>

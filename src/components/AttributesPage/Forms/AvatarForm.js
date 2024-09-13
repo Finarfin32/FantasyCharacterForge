@@ -37,7 +37,7 @@ function AvatarForm({ image, onImageSave }) {
         >
           <label
             htmlFor="Avatar"
-            className="attributes_col_avatar_text block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+            className="attributes_col_avatar_text block mb-2 font-medium text-goldd dark:text-white font-medium"
           >
             Wyświetlanie awatara
           </label>

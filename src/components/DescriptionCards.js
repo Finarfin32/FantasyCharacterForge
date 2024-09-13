@@ -31,20 +31,20 @@ function Description({
     <>
       <div className="ButtonsDescription flex justify-center mt-4 space-x-4">
         <button
-          className="button-custom bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg shadow-lg border border-gray-400 hover:border-gold disabled:bg-gray-700"
+          className="button-custom border-2 bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg shadow-lg border border-gray-400 hover:border-gold disabled:bg-gray-700"
           onClick={() => setActiveCard(activeCard - 1)}
           disabled={activeCard === 0}
         >
           Przewiń w lewo
         </button>
         <button
-          className="button-custom bg-darkgreen text-white font-semibold py-2 px-4 rounded-lg shadow-lg border border-gray-400 hover:border-gold"
+          className="button-custom border-2 bg-darkgreen text-white font-semibold py-2 px-4 rounded-lg shadow-lg border border-gray-400 hover:border-gold"
           onClick={setPickedCard}
         >
           Potwierdź
         </button>
         <button
-          className="button-custom bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg shadow-lg border border-gray-400 hover:border-gold disabled:bg-gray-700"
+          className="button-custom border-2 bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg shadow-lg border border-gray-400 hover:border-gold disabled:bg-gray-700"
           onClick={() => setActiveCard(activeCard + 1)}
           disabled={activeCard === 3}
         >

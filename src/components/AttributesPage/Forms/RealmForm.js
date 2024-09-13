@@ -10,7 +10,7 @@ function RealmForm({ onSubmit }) {
       <form onSubmit={onSubmit}>
         <label
           htmlFor="realm"
-          className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+          className="block mb-2 font-medium text-goldd dark:text-white font-medium"
         >
           Wybierz królestwo
         </label>

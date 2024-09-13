@@ -13,7 +13,7 @@ function DynastyForm({ onSubmit }) {
     <div className="attributes_col_dynasty">
       <label
         htmlFor="dynasty"
-        className="block mb-2 text-lg font-medium text-goldd dark:text-white font-medium"
+        className="block mb-2 font-medium text-goldd dark:text-white font-medium"
       >
         Dynastia
       </label>

@@ -68,6 +68,7 @@ function Summary({ formData, pickedRaceCard, pickedClassCard }) {
               <span className="font-semibold text-goldAccent">
                 Umiejętności:{" "}
               </span>
+              <br />
               <span>Siła: {formData["skills"]?.strength || 0}</span>
               <br />
               <span>Zręczność: {formData["skills"]?.dexterity || 0}</span>
