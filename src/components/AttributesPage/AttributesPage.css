@@ -35,6 +35,7 @@
   border: solid #807c3f;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  cursor: url("/src/media/pointer.png"), auto;
 }
 
 .submit-button:hover {
@@ -68,3 +69,23 @@
     margin-top: 20px;
   }
 }
+
+select:not([size]) {
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 0.75em 0.75em;
+  padding-right: 2.5rem;
+  cursor: url("/src/media/pointer.png"), auto;
+}
+
+.attributes_col_sex{
+  cursor: url("/src/media/cursor.png"), auto;
+}
+
+.text-goldd {
+  cursor: url("/src/media/cursor.png"), auto;
+}
+
+/* select:focus > option:active { 
+    background: #e70606 !important;
+} */
