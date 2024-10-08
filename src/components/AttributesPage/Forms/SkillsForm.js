@@ -2,7 +2,6 @@ import React from "react";
 import ProgressSkills from "./ProgressSkills";
 import Attribute from "./AttributeForm";
 import "./SkillsForm.css";
-import { RACES } from "../../../consts/const.js";
 
 function SkillsForm({
   count1,
@@ -11,16 +10,10 @@ function SkillsForm({
   setCount1,
   setCount2,
   setCount3,
-  pickedRaceCard,
-  pickedClassCard,
+  strengthValue,
+  dexterityValue,
+  intelligenceValue,
 }) {
-  const strengthValue =
-    RACES[pickedRaceCard]?.strength + RACES[pickedClassCard]?.strength;
-  const dexterityValue =
-    RACES[pickedRaceCard]?.dexterity + RACES[pickedClassCard]?.dexterity;
-  const intelligenceValue =
-    RACES[pickedRaceCard]?.intelligence + RACES[pickedClassCard]?.intelligence;
-
   const attributeData = [
     {
       label: "SIŁA",

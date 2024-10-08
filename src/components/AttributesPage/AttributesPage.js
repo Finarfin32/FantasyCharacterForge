@@ -14,6 +14,7 @@ import RangeForm from "./Forms/RangeForm";
 import FamilyForm from "./Forms/FamilyForm";
 import SkillsForm from "./Forms/SkillsForm";
 import Equipment from "./Forms/Equipment";
+import { RACES } from "../../consts/const";
 
 function AttributesPage({
   pickedRaceCard,
@@ -29,11 +30,18 @@ function AttributesPage({
 
   const [selectedImage, setSelectedImage] = useState();
 
+  const strengthValue =
+    RACES[pickedRaceCard]?.strength + RACES[pickedClassCard]?.strength;
+  const dexterityValue =
+    RACES[pickedRaceCard]?.dexterity + RACES[pickedClassCard]?.dexterity;
+  const intelligenceValue =
+    RACES[pickedRaceCard]?.intelligence + RACES[pickedClassCard]?.intelligence;
+
   const onSubmit = (data) => {
     data["skills"] = {
-      strength: count1,
-      dexterity: count2,
-      intelligence: count3,
+      strength: count1 + strengthValue,
+      dexterity: count2 + dexterityValue,
+      intelligence: count3 + intelligenceValue,
     };
     data["avatar"] = selectedImage;
     handleSubmitAttributes(data);
@@ -58,8 +66,9 @@ function AttributesPage({
               setCount1={setCount1}
               setCount2={setCount2}
               setCount3={setCount3}
-              pickedRaceCard={pickedRaceCard}
-              pickedClassCard={pickedClassCard}
+              strengthValue={strengthValue}
+              dexterityValue={dexterityValue}
+              intelligenceValue={intelligenceValue}
             />
           </div>
         </div>
