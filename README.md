@@ -10,6 +10,10 @@ The creator also allows you to export the created character to a PDF file. This 
 
 Additionally, the creator provides the option to fill in essential character information. You can enter their history, personality traits, and even abilities.
 
+## Link to automated tests
+
+https://github.com/Finarfin32/FantasyCharacterForgeTests
+
 ## Demo
 
 Insert gif or link to demo

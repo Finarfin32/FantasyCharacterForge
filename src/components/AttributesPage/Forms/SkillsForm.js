@@ -52,13 +52,13 @@ function SkillsForm({
               count={attribute.count}
               maxValue={totalPoints >= globalLimit ? 0 : limit}
             />
-            <div className="bonus_stats bg-rose-800">*{attribute.value}</div>
+            <div className="bonus_stats bg-rose-800">+{attribute.value}*</div>
             <span className="text-sm font-medium text-rose-800 hover:text-goldd">
               *Punkty przyznane za wybór klasy i rasy.
             </span>
           </div>
         ))}
-      </div>{" "}
+      </div>
     </>
   );
 }
