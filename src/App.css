@@ -36,7 +36,6 @@ body {
   border: 2px solid rgb(250, 250, 250);
   height: 400px;
   width: 200px;
-  /* background-color: rgb(81, 100, 2); */
   border-radius: 5px;
   display: flex;
   float: left;
@@ -67,7 +66,6 @@ body {
   background: black;
 }
 p {
-  /* margin: 20px; */
   font-size: 20px;
 }
 

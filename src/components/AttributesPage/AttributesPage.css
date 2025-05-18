@@ -12,7 +12,7 @@
   margin-right: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Rozmieść zawartość na górze i na dole */
+  justify-content: space-between;
 }
 
 .right-section {
@@ -85,7 +85,3 @@ select:not([size]) {
 .text-goldd {
   cursor: url("/src/media/cursor.png"), auto;
 }
-
-/* select:focus > option:active { 
-    background: #e70606 !important;
-} */

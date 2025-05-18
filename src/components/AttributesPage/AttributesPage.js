@@ -16,20 +16,25 @@ import SkillsForm from "./Forms/SkillsForm";
 import Equipment from "./Forms/Equipment";
 import { RACES } from "../../consts/const";
 
+// Komponent AttributesPage zarządza wszystkimi formularzami dotyczącymi atrybutów postaci
 function AttributesPage({
   pickedRaceCard,
   pickedClassCard,
   handleSubmitAttributes,
 }) {
+  // Inicjalizacja metod formularza z react-hook-form
   const methods = useForm();
   const { handleSubmit } = methods;
 
+  // Stany do zarządzania punktami atrybutów
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
 
+  // Stan do przechowywania wybranego obrazu (awataru)
   const [selectedImage, setSelectedImage] = useState();
 
+  // Obliczanie wartości bonusów atrybutów na podstawie wybranej rasy i klasy
   const strengthValue =
     RACES[pickedRaceCard]?.strength + RACES[pickedClassCard]?.strength;
   const dexterityValue =
@@ -37,28 +42,36 @@ function AttributesPage({
   const intelligenceValue =
     RACES[pickedRaceCard]?.intelligence + RACES[pickedClassCard]?.intelligence;
 
+  // Funkcja wywoływana po wysłaniu formularza
   const onSubmit = (data) => {
+    // Dodanie sumy punktów atrybutów do danych
     data["skills"] = {
       strength: count1 + strengthValue,
       dexterity: count2 + dexterityValue,
       intelligence: count3 + intelligenceValue,
     };
+    // Dodanie obrazu (awataru) do danych
     data["avatar"] = selectedImage;
+    // Przekazanie wszystkich danych do funkcji nadrzędnej
     handleSubmitAttributes(data);
   };
 
+  // Funkcja obsługująca zapis obrazu (awataru)
   const handleImageSave = (image) => {
     setSelectedImage(image);
   };
 
   return (
+    // Udostępnienie metod formularza wszystkim komponentom potomnym
     <FormProvider {...methods}>
       <div className="container">
         <div className="avatar-and-skills">
           <div className="avatar-container">
+            {/* Formularz wyboru i podglądu awataru */}
             <AvatarForm image={selectedImage} onImageSave={handleImageSave} />
           </div>
           <div className="skills-container">
+            {/* Formularz rozdzielania punktów atrybutów */}
             <SkillsForm
               count1={count1}
               count2={count2}
@@ -74,6 +87,7 @@ function AttributesPage({
         </div>
         <div className="right-section">
           <div className="forms-top">
+            {/* Formularz wyboru płci */}
             <SexForm />
             <CharacterNameForm onSubmit={onSubmit} />
             <RangeForm />
@@ -86,6 +100,7 @@ function AttributesPage({
             <TestForm />
             <Biography />
             <Equipment />
+            {/* Przycisk wysyłający cały formularz */}
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 className="submit-button"

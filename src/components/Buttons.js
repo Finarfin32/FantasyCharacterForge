@@ -2,45 +2,50 @@ import React from "react";
 import "../App.css";
 import "./Buttons.css";
 
+// Komponent Buttons wyświetla pasek nawigacyjny do przełączania zakładek kreatora postaci
 function Buttons({ setCurrentTab, isDisabled }) {
   return (
     <div className="ButtonsMainPage">
+      {/* Przycisk do przejścia do zakładki wyboru rasy */}
       <button
         className="btn-tab draw-border"
         onClick={() => {
-          setCurrentTab(0); //If "Rasy" picked (onClick) setCurrentTab to 0.
+          setCurrentTab(0); // Ustawia zakładkę na "Rasy postaci"
         }}
-        disabled={isDisabled[0]} //Array, set to 0 this sets the function (setDisabled) to [false, false, true]
+        disabled={isDisabled[0]} // Blokuje przycisk, jeśli odpowiedni element tablicy isDisabled jest true
       >
         Rasy postaci
       </button>
       &nbsp;&nbsp;&nbsp;
+      {/* Przycisk do przejścia do zakładki wyboru klasy */}
       <button
         className="btn-tab draw-border"
         onClick={() => {
-          setCurrentTab(1); //If "Klasy" picked (onClick) setCurrentTab to 1.
+          setCurrentTab(1); // Ustawia zakładkę na "Klasy postaci"
         }}
-        disabled={isDisabled[1]} //Array, set to 0 this sets the function (setDisabled) to [false, false, false, ]
+        disabled={isDisabled[1]}
       >
         Klasy postaci
       </button>
       &nbsp;&nbsp;&nbsp;
+      {/* Przycisk do przejścia do zakładki wyboru atrybutów */}
       <button
         className="btn-tab draw-border"
         onClick={() => {
-          setCurrentTab(2); //2
+          setCurrentTab(2); // Ustawia zakładkę na "Atrybuty postaci"
         }}
-        disabled={isDisabled[2]} //[false, false, false, false]
+        disabled={isDisabled[2]}
       >
         Atrybuty postaci
       </button>
       &nbsp;&nbsp;&nbsp;
+      {/* Przycisk do przejścia do zakładki podsumowania */}
       <button
         className="btn-tab draw-border"
         onClick={() => {
-          setCurrentTab(3); //3
+          setCurrentTab(3); // Ustawia zakładkę na "Podsumowanie"
         }}
-        disabled={isDisabled[3]} //[false, false, false, false]
+        disabled={isDisabled[3]}
       >
         Podsumowanie
       </button>

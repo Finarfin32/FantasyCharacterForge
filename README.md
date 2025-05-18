@@ -44,3 +44,37 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+---
+
+## Installation
+
+Clone the repository and install dependencies:
+
+```
+git clone https://github.com/Finarfin32/FantasyCharacterForge.git
+cd FantasyCharacterForge
+npm install
+```
+
+## Technologies
+
+- React
+- Tailwind CSS
+- React Hook Form
+- Flowbite (UI components)
+- SASS
+
+## Project Structure
+
+- `src/` - Main source code
+  - `components/` - React components
+  - `consts/` - Constants and configuration
+  - `App.js` - Main app component
+  - `index.js` - Entry point
+- `public/` - Static files and HTML template
+
+
+## License
+
+MIT © Mateusz Głód

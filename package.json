@@ -1,16 +1,14 @@
 {
   "homepage": "https://our2worlds.pl/creatorproject/",
   "name": "creatorproject",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "flowbite": "^1.8.1",
-    "flowbite-react": "^0.5.0",
+    "flowbite": "^3.1.2",
+    "flowbite-react": "^0.11.7",
     "react-hook-form": "^7.32.0",
     "react-scripts": "5.0.1",
     "sass": "^1.52.1",
@@ -44,5 +42,8 @@
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.40",
     "tailwindcss": "^3.4.7"
-  }
+  },
+  "description": "Kreator postaci do gry RPG",
+  "author": "Mateusz Głód",
+  "license": "MIT"
 }

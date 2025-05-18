@@ -1,24 +1,22 @@
-/* Custom button styles */
 .button-custom {
-  background-color: #242526cc; /* Custom background color */
-  border-color: #D2C8AE; /* Custom border color */
+  background-color: #242526cc; 
+  border-color: #D2C8AE; 
 }
 
 .button-custom:hover {
-  border-color: #ffa000; /* Gold border on hover */
-  /* border: 2px solid #ffa000; */
+  border-color: #ffa000;
 }
 
 .bg-darkgreen {
-  background-color: #242526cc; /* Dark green background for "Potwierdź" button */
+  background-color: #242526cc;
 }
 
 .hover\\:border-gold:hover {
-  border-color: #ffa000; /* Gold border color on hover */
+  border-color: #ffa000; 
 }
 
 .button-custom:hover {
-  background-color: #006400; /* Custom hover background color */
+  background-color: #006400;
   cursor: url("/src/media/pointer.png"), auto;
 }
 
@@ -67,14 +65,14 @@
   text-transform: uppercase;
 }
 
-/* .header-description {
-  margin-top: -8px;
-  color: #d2c8ae;
-  font-size: 1.5rem;
-  text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
-  margin-left: 20%;
-  margin-right: 20%;
-  text-align: center;
-  font-weight: bold;
-  z-index: 1;
-} */
+
+
+
+
+
+
+
+
+
+
+

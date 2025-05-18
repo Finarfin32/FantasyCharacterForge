@@ -6,10 +6,12 @@ import Elf from "../media/Elf.jpg";
 import Dwarf from "../media/Dwarf.jpg";
 import Demon from "../media/Demon.jpg";
 
+// Komponent RaceCardsState prezentuje dostępne rasy postaci jako karty do wyboru
 function RaceCardsState({ activeCard }) {
   return (
     <>
       <div className="header-top">
+        {/* Nagłówek sekcji wyboru rasy */}
         <h1 className="header-title">Rasa postaci</h1>
         <p className="description">
           Od wysokich elfów i krasnoludów po dzikusów trolli i orków, każda rasa
@@ -18,6 +20,7 @@ function RaceCardsState({ activeCard }) {
         </p>
       </div>
       <div className="Cards-box">
+        {/* Karta rasy: Człowiek */}
         <div className="Human">
           <Card
             name="Człowiek"
@@ -25,6 +28,7 @@ function RaceCardsState({ activeCard }) {
             isActive={activeCard === 0 ? true : false}
           />
         </div>
+        {/* Karta rasy: Elf */}
         <div className="Elf">
           <Card
             name="Elf"
@@ -32,6 +36,7 @@ function RaceCardsState({ activeCard }) {
             isActive={activeCard === 1 ? true : false}
           />
         </div>
+        {/* Karta rasy: Krasnolud */}
         <div className="Dwarf">
           <Card
             name="Krasnolud"
@@ -39,6 +44,7 @@ function RaceCardsState({ activeCard }) {
             isActive={activeCard === 2 ? true : false}
           />
         </div>
+        {/* Karta rasy: Demon */}
         <div className="Demon">
           <Card
             name="Demon"

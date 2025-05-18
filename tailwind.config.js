@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+// Określenie, w jakich plikach Tailwind ma szukać klas CSS używanych w projekcie
 export const content = [
-  "./src/**/*.{html,js}",
-  "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+  "./src/**/*.{html,js}", // Wszystkie pliki HTML i JS w katalogu src
+  "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}", // Komponenty Flowbite React
 ];
+
+// Rozszerzenie domyślnego motywu Tailwinda o własne kolory
 export const theme = {
   extend: {
     colors: {
@@ -15,4 +18,6 @@ export const theme = {
     },
   },
 };
+
+// Dodanie pluginu Flowbite, który rozszerza Tailwinda o dodatkowe komponenty UI
 export const plugins = [require("flowbite/plugin")];

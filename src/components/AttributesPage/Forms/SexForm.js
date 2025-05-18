@@ -3,11 +3,14 @@ import "../../../App.css";
 import "../AttributesPage.css";
 import { useFormContext } from "react-hook-form";
 
+// Komponent SexForm umożliwia użytkownikowi wybór płci postaci za pomocą przycisków radiowych
 function SexForm() {
+  // Pobranie funkcji register z kontekstu formularza react-hook-form
   const { register } = useFormContext();
   return (
     <div className="attributes_col_sex">
       <div className="flex items-center mb-4">
+        {/* Przycisk radiowy do wyboru płci: Mężczyzna */}
         <input
           {...register("sex", { required: true })}
           id="default-radio-1"
@@ -24,9 +27,9 @@ function SexForm() {
         </label>
       </div>
       <div className="flex items-center">
+        {/* Przycisk radiowy do wyboru płci: Kobieta */}
         <input
           {...register("sex", { required: true })}
-          checked
           id="default-radio-2"
           type="radio"
           value="Kobieta"

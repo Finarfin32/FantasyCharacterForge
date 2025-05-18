@@ -2,9 +2,12 @@ import { RACES_DISPLAY } from "../consts/const.js";
 import { CLASSES_DISPLAY } from "../consts/const.js";
 import React, { useEffect, useState } from "react";
 
+// Komponent Summary wyświetla podsumowanie wszystkich wyborów użytkownika
 function Summary({ formData, pickedRaceCard, pickedClassCard }) {
+  // Stan do przechowywania podglądu awatara
   const [preview, setPreview] = useState();
 
+  // Efekt generujący podgląd awatara na podstawie przesłanego pliku
   useEffect(() => {
     if (formData["avatar"]) {
       const reader = new FileReader();
@@ -28,6 +31,7 @@ function Summary({ formData, pickedRaceCard, pickedClassCard }) {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col">
+            {/* Wyświetlanie podstawowych informacji o postaci */}
             <p className="mb-2">
               <span className="font-semibold text-goldAccent">Imię: </span>
               {formData["character_name"]}
@@ -64,6 +68,7 @@ function Summary({ formData, pickedRaceCard, pickedClassCard }) {
               <span className="font-semibold text-goldAccent">Ekwipunek: </span>
               {formData["Equipment"]}
             </p>
+            {/* Wyświetlanie umiejętności */}
             <p className="mb-2">
               <span className="font-semibold text-goldAccent">
                 Umiejętności:{" "}
@@ -78,6 +83,7 @@ function Summary({ formData, pickedRaceCard, pickedClassCard }) {
             </p>
           </div>
           <div className="flex flex-col items-center">
+            {/* Podgląd wybranego awatara */}
             {preview && (
               <div className="mb-4">
                 <img
@@ -87,6 +93,7 @@ function Summary({ formData, pickedRaceCard, pickedClassCard }) {
                 />
               </div>
             )}
+            {/* Wyświetlanie wybranej rasy i klasy */}
             <p className="text-goldAccent font-semibold">
               Wybrana Rasa: {RACES_DISPLAY[pickedRaceCard]}
             </p>
